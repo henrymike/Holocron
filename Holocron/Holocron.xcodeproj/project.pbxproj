@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55EF294E1BCEF4190020C26F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EF294D1BCEF4190020C26F /* main.m */; };
+		55EF29511BCEF4190020C26F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EF29501BCEF4190020C26F /* AppDelegate.m */; };
+		55EF29541BCEF4190020C26F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EF29531BCEF4190020C26F /* ViewController.m */; };
+		55EF29571BCEF4190020C26F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29551BCEF4190020C26F /* Main.storyboard */; };
+		55EF295A1BCEF4190020C26F /* Holocron.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55EF29581BCEF4190020C26F /* Holocron.xcdatamodeld */; };
+		55EF295C1BCEF4190020C26F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55EF295B1BCEF4190020C26F /* Assets.xcassets */; };
+		55EF295F1BCEF4190020C26F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55EF295D1BCEF4190020C26F /* LaunchScreen.storyboard */; };
+		55EF29671BCEF4250020C26F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55EF29661BCEF4250020C26F /* AVFoundation.framework */; };
+		55EF296B1BCEF68D0020C26F /* EasterEggViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EF296A1BCEF68D0020C26F /* EasterEggViewController.m */; settings = {ASSET_TAGS = (); }; };
+		55EF29871BCF157F0020C26F /* ChewbaccaSound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF296D1BCF157F0020C26F /* ChewbaccaSound1.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF29881BCF157F0020C26F /* ChewbaccaSound10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF296E1BCF157F0020C26F /* ChewbaccaSound10.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF29891BCF157F0020C26F /* ChewbaccaSound11.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF296F1BCF157F0020C26F /* ChewbaccaSound11.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF298A1BCF157F0020C26F /* ChewbaccaSound12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29701BCF157F0020C26F /* ChewbaccaSound12.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF298B1BCF157F0020C26F /* ChewbaccaSound13.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29711BCF157F0020C26F /* ChewbaccaSound13.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF298C1BCF157F0020C26F /* ChewbaccaSound14.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29721BCF157F0020C26F /* ChewbaccaSound14.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF298D1BCF157F0020C26F /* ChewbaccaSound15.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29731BCF157F0020C26F /* ChewbaccaSound15.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF298E1BCF157F0020C26F /* ChewbaccaSound16.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29741BCF157F0020C26F /* ChewbaccaSound16.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF298F1BCF157F0020C26F /* ChewbaccaSound17.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29751BCF157F0020C26F /* ChewbaccaSound17.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF29901BCF157F0020C26F /* ChewbaccaSound18.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29761BCF157F0020C26F /* ChewbaccaSound18.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF29911BCF157F0020C26F /* ChewbaccaSound19.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29771BCF157F0020C26F /* ChewbaccaSound19.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF29921BCF157F0020C26F /* ChewbaccaSound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29781BCF157F0020C26F /* ChewbaccaSound2.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF29931BCF157F0020C26F /* ChewbaccaSound20.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29791BCF157F0020C26F /* ChewbaccaSound20.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF29941BCF157F0020C26F /* ChewbaccaSound21.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF297A1BCF157F0020C26F /* ChewbaccaSound21.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF29951BCF157F0020C26F /* ChewbaccaSound22.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF297B1BCF157F0020C26F /* ChewbaccaSound22.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF29961BCF157F0020C26F /* ChewbaccaSound23.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF297C1BCF157F0020C26F /* ChewbaccaSound23.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF29971BCF157F0020C26F /* ChewbaccaSound24.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF297D1BCF157F0020C26F /* ChewbaccaSound24.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF29981BCF157F0020C26F /* ChewbaccaSound25.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF297E1BCF157F0020C26F /* ChewbaccaSound25.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF29991BCF157F0020C26F /* ChewbaccaSound26.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF297F1BCF157F0020C26F /* ChewbaccaSound26.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF299A1BCF157F0020C26F /* ChewbaccaSound3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29801BCF157F0020C26F /* ChewbaccaSound3.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF299B1BCF157F0020C26F /* ChewbaccaSound4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29811BCF157F0020C26F /* ChewbaccaSound4.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF299C1BCF157F0020C26F /* ChewbaccaSound5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29821BCF157F0020C26F /* ChewbaccaSound5.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF299D1BCF157F0020C26F /* ChewbaccaSound6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29831BCF157F0020C26F /* ChewbaccaSound6.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF299E1BCF157F0020C26F /* ChewbaccaSound7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29841BCF157F0020C26F /* ChewbaccaSound7.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF299F1BCF157F0020C26F /* ChewbaccaSound8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29851BCF157F0020C26F /* ChewbaccaSound8.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF29A01BCF157F0020C26F /* ChewbaccaSound9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29861BCF157F0020C26F /* ChewbaccaSound9.mp3 */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		55EF29491BCEF4190020C26F /* Holocron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Holocron.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55EF294D1BCEF4190020C26F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		55EF294F1BCEF4190020C26F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		55EF29501BCEF4190020C26F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		55EF29521BCEF4190020C26F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		55EF29531BCEF4190020C26F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		55EF29561BCEF4190020C26F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55EF29591BCEF4190020C26F /* Holocron.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Holocron.xcdatamodel; sourceTree = "<group>"; };
+		55EF295B1BCEF4190020C26F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55EF295E1BCEF4190020C26F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		55EF29601BCEF4190020C26F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55EF29661BCEF4250020C26F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		55EF29691BCEF68D0020C26F /* EasterEggViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasterEggViewController.h; sourceTree = "<group>"; };
+		55EF296A1BCEF68D0020C26F /* EasterEggViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasterEggViewController.m; sourceTree = "<group>"; };
+		55EF296D1BCF157F0020C26F /* ChewbaccaSound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound1.mp3; sourceTree = "<group>"; };
+		55EF296E1BCF157F0020C26F /* ChewbaccaSound10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound10.mp3; sourceTree = "<group>"; };
+		55EF296F1BCF157F0020C26F /* ChewbaccaSound11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound11.mp3; sourceTree = "<group>"; };
+		55EF29701BCF157F0020C26F /* ChewbaccaSound12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound12.mp3; sourceTree = "<group>"; };
+		55EF29711BCF157F0020C26F /* ChewbaccaSound13.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound13.mp3; sourceTree = "<group>"; };
+		55EF29721BCF157F0020C26F /* ChewbaccaSound14.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound14.mp3; sourceTree = "<group>"; };
+		55EF29731BCF157F0020C26F /* ChewbaccaSound15.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound15.mp3; sourceTree = "<group>"; };
+		55EF29741BCF157F0020C26F /* ChewbaccaSound16.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound16.mp3; sourceTree = "<group>"; };
+		55EF29751BCF157F0020C26F /* ChewbaccaSound17.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound17.mp3; sourceTree = "<group>"; };
+		55EF29761BCF157F0020C26F /* ChewbaccaSound18.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound18.mp3; sourceTree = "<group>"; };
+		55EF29771BCF157F0020C26F /* ChewbaccaSound19.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound19.mp3; sourceTree = "<group>"; };
+		55EF29781BCF157F0020C26F /* ChewbaccaSound2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound2.mp3; sourceTree = "<group>"; };
+		55EF29791BCF157F0020C26F /* ChewbaccaSound20.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound20.mp3; sourceTree = "<group>"; };
+		55EF297A1BCF157F0020C26F /* ChewbaccaSound21.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound21.mp3; sourceTree = "<group>"; };
+		55EF297B1BCF157F0020C26F /* ChewbaccaSound22.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound22.mp3; sourceTree = "<group>"; };
+		55EF297C1BCF157F0020C26F /* ChewbaccaSound23.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound23.mp3; sourceTree = "<group>"; };
+		55EF297D1BCF157F0020C26F /* ChewbaccaSound24.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound24.mp3; sourceTree = "<group>"; };
+		55EF297E1BCF157F0020C26F /* ChewbaccaSound25.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound25.mp3; sourceTree = "<group>"; };
+		55EF297F1BCF157F0020C26F /* ChewbaccaSound26.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound26.mp3; sourceTree = "<group>"; };
+		55EF29801BCF157F0020C26F /* ChewbaccaSound3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound3.mp3; sourceTree = "<group>"; };
+		55EF29811BCF157F0020C26F /* ChewbaccaSound4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound4.mp3; sourceTree = "<group>"; };
+		55EF29821BCF157F0020C26F /* ChewbaccaSound5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound5.mp3; sourceTree = "<group>"; };
+		55EF29831BCF157F0020C26F /* ChewbaccaSound6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound6.mp3; sourceTree = "<group>"; };
+		55EF29841BCF157F0020C26F /* ChewbaccaSound7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound7.mp3; sourceTree = "<group>"; };
+		55EF29851BCF157F0020C26F /* ChewbaccaSound8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound8.mp3; sourceTree = "<group>"; };
+		55EF29861BCF157F0020C26F /* ChewbaccaSound9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound9.mp3; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55EF29461BCEF4190020C26F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55EF29671BCEF4250020C26F /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55EF29401BCEF4190020C26F = {
+			isa = PBXGroup;
+			children = (
+				55EF29661BCEF4250020C26F /* AVFoundation.framework */,
+				55EF294B1BCEF4190020C26F /* Holocron */,
+				55EF294A1BCEF4190020C26F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		55EF294A1BCEF4190020C26F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55EF29491BCEF4190020C26F /* Holocron.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55EF294B1BCEF4190020C26F /* Holocron */ = {
+			isa = PBXGroup;
+			children = (
+				55EF294F1BCEF4190020C26F /* AppDelegate.h */,
+				55EF29501BCEF4190020C26F /* AppDelegate.m */,
+				55EF29521BCEF4190020C26F /* ViewController.h */,
+				55EF29531BCEF4190020C26F /* ViewController.m */,
+				55EF29691BCEF68D0020C26F /* EasterEggViewController.h */,
+				55EF296A1BCEF68D0020C26F /* EasterEggViewController.m */,
+				55EF29551BCEF4190020C26F /* Main.storyboard */,
+				55EF296C1BCF157F0020C26F /* Chewey Audio */,
+				55EF295B1BCEF4190020C26F /* Assets.xcassets */,
+				55EF295D1BCEF4190020C26F /* LaunchScreen.storyboard */,
+				55EF29601BCEF4190020C26F /* Info.plist */,
+				55EF29681BCEF5B00020C26F /* Data */,
+				55EF294C1BCEF4190020C26F /* Supporting Files */,
+			);
+			path = Holocron;
+			sourceTree = "<group>";
+		};
+		55EF294C1BCEF4190020C26F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55EF294D1BCEF4190020C26F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55EF29681BCEF5B00020C26F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				55EF29581BCEF4190020C26F /* Holocron.xcdatamodeld */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		55EF296C1BCF157F0020C26F /* Chewey Audio */ = {
+			isa = PBXGroup;
+			children = (
+				55EF296D1BCF157F0020C26F /* ChewbaccaSound1.mp3 */,
+				55EF296E1BCF157F0020C26F /* ChewbaccaSound10.mp3 */,
+				55EF296F1BCF157F0020C26F /* ChewbaccaSound11.mp3 */,
+				55EF29701BCF157F0020C26F /* ChewbaccaSound12.mp3 */,
+				55EF29711BCF157F0020C26F /* ChewbaccaSound13.mp3 */,
+				55EF29721BCF157F0020C26F /* ChewbaccaSound14.mp3 */,
+				55EF29731BCF157F0020C26F /* ChewbaccaSound15.mp3 */,
+				55EF29741BCF157F0020C26F /* ChewbaccaSound16.mp3 */,
+				55EF29751BCF157F0020C26F /* ChewbaccaSound17.mp3 */,
+				55EF29761BCF157F0020C26F /* ChewbaccaSound18.mp3 */,
+				55EF29771BCF157F0020C26F /* ChewbaccaSound19.mp3 */,
+				55EF29781BCF157F0020C26F /* ChewbaccaSound2.mp3 */,
+				55EF29791BCF157F0020C26F /* ChewbaccaSound20.mp3 */,
+				55EF297A1BCF157F0020C26F /* ChewbaccaSound21.mp3 */,
+				55EF297B1BCF157F0020C26F /* ChewbaccaSound22.mp3 */,
+				55EF297C1BCF157F0020C26F /* ChewbaccaSound23.mp3 */,
+				55EF297D1BCF157F0020C26F /* ChewbaccaSound24.mp3 */,
+				55EF297E1BCF157F0020C26F /* ChewbaccaSound25.mp3 */,
+				55EF297F1BCF157F0020C26F /* ChewbaccaSound26.mp3 */,
+				55EF29801BCF157F0020C26F /* ChewbaccaSound3.mp3 */,
+				55EF29811BCF157F0020C26F /* ChewbaccaSound4.mp3 */,
+				55EF29821BCF157F0020C26F /* ChewbaccaSound5.mp3 */,
+				55EF29831BCF157F0020C26F /* ChewbaccaSound6.mp3 */,
+				55EF29841BCF157F0020C26F /* ChewbaccaSound7.mp3 */,
+				55EF29851BCF157F0020C26F /* ChewbaccaSound8.mp3 */,
+				55EF29861BCF157F0020C26F /* ChewbaccaSound9.mp3 */,
+			);
+			path = "Chewey Audio";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55EF29481BCEF4190020C26F /* Holocron */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55EF29631BCEF4190020C26F /* Build configuration list for PBXNativeTarget "Holocron" */;
+			buildPhases = (
+				55EF29451BCEF4190020C26F /* Sources */,
+				55EF29461BCEF4190020C26F /* Frameworks */,
+				55EF29471BCEF4190020C26F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Holocron;
+			productName = Holocron;
+			productReference = 55EF29491BCEF4190020C26F /* Holocron.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55EF29411BCEF4190020C26F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Mike Henry";
+				TargetAttributes = {
+					55EF29481BCEF4190020C26F = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 55EF29441BCEF4190020C26F /* Build configuration list for PBXProject "Holocron" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55EF29401BCEF4190020C26F;
+			productRefGroup = 55EF294A1BCEF4190020C26F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55EF29481BCEF4190020C26F /* Holocron */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55EF29471BCEF4190020C26F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55EF298B1BCF157F0020C26F /* ChewbaccaSound13.mp3 in Resources */,
+				55EF299D1BCF157F0020C26F /* ChewbaccaSound6.mp3 in Resources */,
+				55EF29871BCF157F0020C26F /* ChewbaccaSound1.mp3 in Resources */,
+				55EF29911BCF157F0020C26F /* ChewbaccaSound19.mp3 in Resources */,
+				55EF295F1BCEF4190020C26F /* LaunchScreen.storyboard in Resources */,
+				55EF29941BCF157F0020C26F /* ChewbaccaSound21.mp3 in Resources */,
+				55EF298A1BCF157F0020C26F /* ChewbaccaSound12.mp3 in Resources */,
+				55EF298D1BCF157F0020C26F /* ChewbaccaSound15.mp3 in Resources */,
+				55EF29921BCF157F0020C26F /* ChewbaccaSound2.mp3 in Resources */,
+				55EF299C1BCF157F0020C26F /* ChewbaccaSound5.mp3 in Resources */,
+				55EF29891BCF157F0020C26F /* ChewbaccaSound11.mp3 in Resources */,
+				55EF298C1BCF157F0020C26F /* ChewbaccaSound14.mp3 in Resources */,
+				55EF29991BCF157F0020C26F /* ChewbaccaSound26.mp3 in Resources */,
+				55EF298E1BCF157F0020C26F /* ChewbaccaSound16.mp3 in Resources */,
+				55EF298F1BCF157F0020C26F /* ChewbaccaSound17.mp3 in Resources */,
+				55EF299E1BCF157F0020C26F /* ChewbaccaSound7.mp3 in Resources */,
+				55EF295C1BCEF4190020C26F /* Assets.xcassets in Resources */,
+				55EF29961BCF157F0020C26F /* ChewbaccaSound23.mp3 in Resources */,
+				55EF299B1BCF157F0020C26F /* ChewbaccaSound4.mp3 in Resources */,
+				55EF299F1BCF157F0020C26F /* ChewbaccaSound8.mp3 in Resources */,
+				55EF29971BCF157F0020C26F /* ChewbaccaSound24.mp3 in Resources */,
+				55EF29571BCEF4190020C26F /* Main.storyboard in Resources */,
+				55EF29951BCF157F0020C26F /* ChewbaccaSound22.mp3 in Resources */,
+				55EF29A01BCF157F0020C26F /* ChewbaccaSound9.mp3 in Resources */,
+				55EF29881BCF157F0020C26F /* ChewbaccaSound10.mp3 in Resources */,
+				55EF29931BCF157F0020C26F /* ChewbaccaSound20.mp3 in Resources */,
+				55EF29901BCF157F0020C26F /* ChewbaccaSound18.mp3 in Resources */,
+				55EF29981BCF157F0020C26F /* ChewbaccaSound25.mp3 in Resources */,
+				55EF299A1BCF157F0020C26F /* ChewbaccaSound3.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55EF29451BCEF4190020C26F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55EF29541BCEF4190020C26F /* ViewController.m in Sources */,
+				55EF295A1BCEF4190020C26F /* Holocron.xcdatamodeld in Sources */,
+				55EF29511BCEF4190020C26F /* AppDelegate.m in Sources */,
+				55EF296B1BCEF68D0020C26F /* EasterEggViewController.m in Sources */,
+				55EF294E1BCEF4190020C26F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		55EF29551BCEF4190020C26F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55EF29561BCEF4190020C26F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		55EF295D1BCEF4190020C26F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55EF295E1BCEF4190020C26F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55EF29611BCEF4190020C26F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		55EF29621BCEF4190020C26F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55EF29641BCEF4190020C26F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Holocron/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = henrymike.Holocron;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		55EF29651BCEF4190020C26F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Holocron/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = henrymike.Holocron;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55EF29441BCEF4190020C26F /* Build configuration list for PBXProject "Holocron" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55EF29611BCEF4190020C26F /* Debug */,
+				55EF29621BCEF4190020C26F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55EF29631BCEF4190020C26F /* Build configuration list for PBXNativeTarget "Holocron" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55EF29641BCEF4190020C26F /* Debug */,
+				55EF29651BCEF4190020C26F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		55EF29581BCEF4190020C26F /* Holocron.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				55EF29591BCEF4190020C26F /* Holocron.xcdatamodel */,
+			);
+			currentVersion = 55EF29591BCEF4190020C26F /* Holocron.xcdatamodel */;
+			path = Holocron.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 55EF29411BCEF4190020C26F /* Project object */;
+}
