@@ -31,10 +31,10 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    _characterName.text = [_selectedCharacter objectForKey:@"trackName"];
-    _characterHomePlanet.text = [_selectedCharacter objectForKey:@"artistName"];
-    _characterSpecies.text = [_selectedCharacter objectForKey:@"collectionName"];
-    _characterBioTextView.text = [_selectedCharacter objectForKey:@"trackName"];
+    _characterName.text = [_selectedCharacter objectForKey:@"name"];
+    _characterHomePlanet.text = [_selectedCharacter objectForKey:@"homeworld"];
+    _characterSpecies.text = [_selectedCharacter objectForKey:@"species"];
+    _characterBioTextView.text = [_selectedCharacter objectForKey:@"summary"];
 }
 
 - (void)didReceiveMemoryWarning {

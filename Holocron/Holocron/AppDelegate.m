@@ -26,7 +26,8 @@ bool serverAvailable;
 
 - (void)getDataForSearch:(NSString *)searchString {
     NSLog(@"Get data");
-    NSURL *fileURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://%@/search?term=%@",_hostName,searchString]];
+//    NSURL *fileURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://%@/search?term=%@",_hostName,searchString]];
+    NSURL *fileURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/api/characters",_hostName]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:fileURL];
     [request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
@@ -36,9 +37,9 @@ bool serverAvailable;
         if (([data length] > 0) && (error == nil)) {
             NSJSONSerialization *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
             NSLog(@"Got data %@",json);
-            _characterArray = [(NSDictionary *) json objectForKey:@"results"];
+            _characterArray = [(NSDictionary *) json objectForKey:@"characters"];
             for (NSDictionary *resultsDict in _characterArray) {
-                NSLog(@"Song Name:%@",[resultsDict objectForKey:@"trackName"]);
+                NSLog(@"Character Name:%@",[resultsDict objectForKey:@"name"]);
             }
             dispatch_async(dispatch_get_main_queue(), ^{
                 NSLog(@"Async");
@@ -151,7 +152,8 @@ bool serverAvailable;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
-    _hostName = @"itunes.apple.com";
+//    _hostName = @"itunes.apple.com";
+    _hostName = @"10.1.10.189:3000";
     hostReach = [Reachability reachabilityWithHostName:_hostName];
     [hostReach startNotifier];
         [self updateReachabilityStatus:hostReach];

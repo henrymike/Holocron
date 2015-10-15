@@ -38,7 +38,7 @@
     NSLog(@"CFRAIP");
     UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"charCell"];
     NSDictionary *selectedResult = _appDelegate.characterArray[indexPath.row];
-    cell.textLabel.text = [selectedResult objectForKey:@"trackName"];
+    cell.textLabel.text = [selectedResult objectForKey:@"name"];
     
     return cell;
 }
