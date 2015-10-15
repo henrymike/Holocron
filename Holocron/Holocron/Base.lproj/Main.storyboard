@@ -43,7 +43,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="chewey" translatesAutoresizingMaskIntoConstraints="NO" id="6Um-OT-tIc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chewey" translatesAutoresizingMaskIntoConstraints="NO" id="6Um-OT-tIc">
                                 <rect key="frame" x="0.0" y="72" width="600" height="479"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIl-DB-b3Q">
@@ -151,7 +151,7 @@
                             <constraint firstItem="zgb-Dx-8Sd" firstAttribute="top" secondItem="7L6-ZP-I76" secondAttribute="bottom" constant="21" id="T2t-xg-lQJ"/>
                             <constraint firstItem="6Um-OT-tIc" firstAttribute="leading" secondItem="7Gj-hl-hFU" secondAttribute="leadingMargin" constant="-20" id="Udc-Bi-HD6"/>
                             <constraint firstItem="klk-8H-Ciq" firstAttribute="top" secondItem="7L6-ZP-I76" secondAttribute="bottom" constant="164" id="a1s-R0-8sb"/>
-                            <constraint firstItem="0rN-Ny-VTq" firstAttribute="top" secondItem="6Um-OT-tIc" secondAttribute="bottom" id="dOM-Oc-xLH"/>
+                            <constraint firstItem="0rN-Ny-VTq" firstAttribute="top" secondItem="6Um-OT-tIc" secondAttribute="bottom" constant="49" id="dOM-Oc-xLH"/>
                             <constraint firstItem="LSh-Uz-Req" firstAttribute="top" secondItem="vIl-DB-b3Q" secondAttribute="bottom" constant="95" id="hfC-I4-UTj"/>
                             <constraint firstItem="vIl-DB-b3Q" firstAttribute="leading" secondItem="7Gj-hl-hFU" secondAttribute="leadingMargin" constant="23" id="i0a-5U-QVp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6Um-OT-tIc" secondAttribute="trailing" constant="-20" id="syM-7W-mru"/>
