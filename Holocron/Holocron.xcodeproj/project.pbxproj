@@ -24,6 +24,9 @@
 		55EF29AF1BCF3B240020C26F /* ChewbaccaSound6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A71BCF3B240020C26F /* ChewbaccaSound6.mp3 */; settings = {ASSET_TAGS = (); }; };
 		55EF29B01BCF3B240020C26F /* ChewbaccaSound7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A81BCF3B240020C26F /* ChewbaccaSound7.mp3 */; settings = {ASSET_TAGS = (); }; };
 		55EF29B11BCF3B240020C26F /* ChewbaccaSound8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A91BCF3B240020C26F /* ChewbaccaSound8.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF29BD1BD01C3B0020C26F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EF29BC1BD01C3B0020C26F /* Reachability.m */; settings = {ASSET_TAGS = (); }; };
+		55EF29BF1BD01D080020C26F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55EF29BE1BD01D080020C26F /* SystemConfiguration.framework */; };
+		55EF29C11BD01D1F0020C26F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55EF29C01BD01D1F0020C26F /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,10 @@
 		55EF29A71BCF3B240020C26F /* ChewbaccaSound6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound6.mp3; sourceTree = "<group>"; };
 		55EF29A81BCF3B240020C26F /* ChewbaccaSound7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound7.mp3; sourceTree = "<group>"; };
 		55EF29A91BCF3B240020C26F /* ChewbaccaSound8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound8.mp3; sourceTree = "<group>"; };
+		55EF29BB1BD01C3B0020C26F /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		55EF29BC1BD01C3B0020C26F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		55EF29BE1BD01D080020C26F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		55EF29C01BD01D1F0020C26F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55EF29C11BD01D1F0020C26F /* Social.framework in Frameworks */,
+				55EF29BF1BD01D080020C26F /* SystemConfiguration.framework in Frameworks */,
 				55EF29671BCEF4250020C26F /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +75,8 @@
 		55EF29401BCEF4190020C26F = {
 			isa = PBXGroup;
 			children = (
+				55EF29C01BD01D1F0020C26F /* Social.framework */,
+				55EF29BE1BD01D080020C26F /* SystemConfiguration.framework */,
 				55EF29A11BCF3B240020C26F /* Chewey Audio */,
 				55EF29661BCEF4250020C26F /* AVFoundation.framework */,
 				55EF294B1BCEF4190020C26F /* Holocron */,
@@ -86,6 +97,8 @@
 			children = (
 				55EF294F1BCEF4190020C26F /* AppDelegate.h */,
 				55EF29501BCEF4190020C26F /* AppDelegate.m */,
+				55EF29BB1BD01C3B0020C26F /* Reachability.h */,
+				55EF29BC1BD01C3B0020C26F /* Reachability.m */,
 				55EF29521BCEF4190020C26F /* ViewController.h */,
 				55EF29531BCEF4190020C26F /* ViewController.m */,
 				55EF29691BCEF68D0020C26F /* EasterEggViewController.h */,
@@ -213,6 +226,7 @@
 				55EF295A1BCEF4190020C26F /* Holocron.xcdatamodeld in Sources */,
 				55EF29511BCEF4190020C26F /* AppDelegate.m in Sources */,
 				55EF296B1BCEF68D0020C26F /* EasterEggViewController.m in Sources */,
+				55EF29BD1BD01C3B0020C26F /* Reachability.m in Sources */,
 				55EF294E1BCEF4190020C26F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

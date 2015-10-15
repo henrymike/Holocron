@@ -14,6 +14,126 @@
 
 @implementation AppDelegate
 
+Reachability *hostReach;
+Reachability *internetReach;
+Reachability *wifiReach;
+bool internetAvailable;
+bool serverAvailable;
+
+
+#pragma mark - File System Methods
+
+- (NSString *)getDocumentsDirectory {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true);
+    NSString *documentDirectory = paths[0];
+    NSLog(@"DocPath:%@",paths[0]);
+    return documentDirectory;
+}
+
+- (BOOL)fileIsLocal:(NSString *)filename {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *filePath = [[self getDocumentsDirectory] stringByAppendingPathComponent:filename];
+    return [fileManager fileExistsAtPath:filePath];
+}
+
+#pragma mark - Network Methods
+
+- (void)getImageFromServer:(NSString *)localFileName fromURL:(NSString *)fullFileName atIndexPath:(NSIndexPath *)indexPath {
+    if (serverAvailable) {
+        NSURL *fileURL = [NSURL URLWithString:fullFileName];
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+        [request setURL:fileURL];
+        [request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
+        [request setTimeoutInterval:30.0];
+        NSURLSession *session = [NSURLSession sharedSession];
+        NSLog(@"PreSession");
+        [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            NSLog(@"Length:%li error:%@",[data length],error);
+            if (([data length]> 0) && (error == nil)) {
+                NSLog(@"Got Data");
+                NSString *savedFilePath = [[self getDocumentsDirectory] stringByAppendingPathComponent:localFileName];
+                UIImage *imageTemp = [UIImage imageWithData:data];
+                if (imageTemp != nil) {
+                    [data writeToFile:savedFilePath atomically:true];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [_iTunesTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+                    });
+                }
+            } else {
+                NSLog(@"No data");
+            }
+        }] resume];
+    } else {
+        NSLog(@"Server not available");
+        //TODO: notify user that server is not available
+    }
+}
+
+- (void)updateReachabilityStatus:(Reachability *)currReach {
+    NSParameterAssert([currReach isKindOfClass:[Reachability class]]);
+    NetworkStatus netStatus = [currReach currentReachabilityStatus];
+    if (currReach == hostReach) {
+        switch (netStatus) {
+            case NotReachable:
+                NSLog(@"Server not reachable");
+                serverAvailable = false;
+                break;
+            case ReachableViaWiFi:
+                NSLog(@"Server reachable via Wifi");
+                serverAvailable = true;
+                break;
+            case ReachableViaWWAN:
+                NSLog(@"Server reachable via WAN");
+                serverAvailable = true;
+                break;
+            default:
+                break;
+        }
+    }
+    if (currReach == internetReach) {
+        switch (netStatus) {
+            case NotReachable:
+                NSLog(@"Internet not reachable");
+                internetAvailable = false;
+                break;
+            case ReachableViaWiFi:
+                NSLog(@"Internet reachable via Wifi");
+                internetAvailable = true;
+                break;
+            case ReachableViaWWAN:
+                NSLog(@"Internet reachable via WAN");
+                internetAvailable = true;
+                break;
+            default:
+                break;
+        }
+    }
+}
+
+- (void)reachabilityChanged:(NSNotification *)note {
+    Reachability *currReach = [note object];
+    [self updateReachabilityStatus:currReach];
+}
+
+#pragma mark - Life Cycle Methods
+
+- (void)viewDidLoad {
+    _iTunesArray = [[NSArray alloc] init];
+    
+    _hostName = @"itunes.apple.com";
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+    
+    hostReach = [Reachability reachabilityWithHostName:_hostName];
+    [hostReach startNotifier];
+    [self updateReachabilityStatus:hostReach];
+    
+    internetReach = [Reachability reachabilityWithHostName:_hostName];
+    [internetReach startNotifier];
+    [self updateReachabilityStatus:internetReach];
+    
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -77,7 +197,8 @@
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Holocron.sqlite"];
     NSError *error = nil;
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
-    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys: [NSNumber numberWithBool:true],NSMigratePersistentStoresAutomaticallyOption,[NSNumber numberWithBool:true],NSInferMappingModelAutomaticallyOption, nil];
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error]) {
         // Report any error we got.
         NSMutableDictionary *dict = [NSMutableDictionary dictionary];
         dict[NSLocalizedDescriptionKey] = @"Failed to initialize the application's saved data";
