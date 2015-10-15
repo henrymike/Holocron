@@ -35,6 +35,7 @@
     _characterHomePlanet.text = [_selectedCharacter objectForKey:@"homeworld"];
     _characterSpecies.text = [_selectedCharacter objectForKey:@"species"];
     _characterBioTextView.text = [_selectedCharacter objectForKey:@"summary"];
+    _characterImage.image = [UIImage imageNamed:[_selectedCharacter objectForKey:@"image"]];
 }
 
 - (void)didReceiveMemoryWarning {
