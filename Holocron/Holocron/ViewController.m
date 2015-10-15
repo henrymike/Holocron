@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "DetailViewController.h"
 
 @interface ViewController ()
 
@@ -45,6 +46,13 @@
 - (void)gotCharacterReceived {
     NSLog(@"GCR");
     [_characterTableView reloadData];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    DetailViewController *destController = [segue destinationViewController];
+    NSIndexPath *indexPath = [_characterTableView indexPathForSelectedRow];
+    NSDictionary *selectedCharacter = _appDelegate.characterArray[indexPath.row];
+    destController.selectedCharacter = selectedCharacter;
 }
 
 

@@ -27,6 +27,7 @@
 		55EF29BD1BD01C3B0020C26F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EF29BC1BD01C3B0020C26F /* Reachability.m */; settings = {ASSET_TAGS = (); }; };
 		55EF29BF1BD01D080020C26F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55EF29BE1BD01D080020C26F /* SystemConfiguration.framework */; };
 		55EF29C11BD01D1F0020C26F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55EF29C01BD01D1F0020C26F /* Social.framework */; };
+		55EF29C41BD04C490020C26F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EF29C31BD04C490020C26F /* DetailViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,8 @@
 		55EF29BC1BD01C3B0020C26F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		55EF29BE1BD01D080020C26F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		55EF29C01BD01D1F0020C26F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		55EF29C21BD04C490020C26F /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		55EF29C31BD04C490020C26F /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 				55EF29BC1BD01C3B0020C26F /* Reachability.m */,
 				55EF29521BCEF4190020C26F /* ViewController.h */,
 				55EF29531BCEF4190020C26F /* ViewController.m */,
+				55EF29C21BD04C490020C26F /* DetailViewController.h */,
+				55EF29C31BD04C490020C26F /* DetailViewController.m */,
 				55EF29691BCEF68D0020C26F /* EasterEggViewController.h */,
 				55EF296A1BCEF68D0020C26F /* EasterEggViewController.m */,
 				55EF29551BCEF4190020C26F /* Main.storyboard */,
@@ -228,6 +233,7 @@
 				55EF296B1BCEF68D0020C26F /* EasterEggViewController.m in Sources */,
 				55EF29BD1BD01C3B0020C26F /* Reachability.m in Sources */,
 				55EF294E1BCEF4190020C26F /* main.m in Sources */,
+				55EF29C41BD04C490020C26F /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
