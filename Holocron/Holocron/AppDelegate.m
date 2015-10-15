@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,22 +22,34 @@ bool internetAvailable;
 bool serverAvailable;
 
 
-#pragma mark - File System Methods
+#pragma mark - Data Fetching Methods
 
-- (NSString *)getDocumentsDirectory {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true);
-    NSString *documentDirectory = paths[0];
-    NSLog(@"DocPath:%@",paths[0]);
-    return documentDirectory;
+- (void)getDataForSearch:(NSString *)searchString {
+    NSLog(@"Get data");
+    NSURL *fileURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://%@/search?term=%@",_hostName,searchString]];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:fileURL];
+    [request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
+    [request setTimeoutInterval:30.0];
+    NSURLSession *session = [NSURLSession sharedSession];
+    [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (([data length] > 0) && (error == nil)) {
+            NSJSONSerialization *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+            NSLog(@"Got data %@",json);
+            _characterArray = [(NSDictionary *) json objectForKey:@"results"];
+            for (NSDictionary *resultsDict in _characterArray) {
+                NSLog(@"Song Name:%@",[resultsDict objectForKey:@"trackName"]);
+            }
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSLog(@"Async");
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"gotCharactersNotification" object:nil];
+            });
+        }
+        else {
+            NSLog(@"No data");
+        }
+    }] resume];
 }
-
-- (BOOL)fileIsLocal:(NSString *)filename {
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSString *filePath = [[self getDocumentsDirectory] stringByAppendingPathComponent:filename];
-    return [fileManager fileExistsAtPath:filePath];
-}
-
-#pragma mark - Network Methods
 
 - (void)getImageFromServer:(NSString *)localFileName fromURL:(NSString *)fullFileName atIndexPath:(NSIndexPath *)indexPath {
     if (serverAvailable) {
@@ -55,9 +68,9 @@ bool serverAvailable;
                 UIImage *imageTemp = [UIImage imageWithData:data];
                 if (imageTemp != nil) {
                     [data writeToFile:savedFilePath atomically:true];
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [_iTunesTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-                    });
+//                    dispatch_async(dispatch_get_main_queue(), ^{
+//                        [_characterTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+//                    });
                 }
             } else {
                 NSLog(@"No data");
@@ -68,6 +81,23 @@ bool serverAvailable;
         //TODO: notify user that server is not available
     }
 }
+
+#pragma mark - File System Methods
+
+- (NSString *)getDocumentsDirectory {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true);
+    NSString *documentDirectory = paths[0];
+    NSLog(@"DocPath:%@",paths[0]);
+    return documentDirectory;
+}
+
+- (BOOL)fileIsLocal:(NSString *)filename {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *filePath = [[self getDocumentsDirectory] stringByAppendingPathComponent:filename];
+    return [fileManager fileExistsAtPath:filePath];
+}
+
+#pragma mark - Network Methods
 
 - (void)updateReachabilityStatus:(Reachability *)currReach {
     NSParameterAssert([currReach isKindOfClass:[Reachability class]]);
@@ -115,28 +145,21 @@ bool serverAvailable;
     [self updateReachabilityStatus:currReach];
 }
 
+
 #pragma mark - Life Cycle Methods
 
-- (void)viewDidLoad {
-    _iTunesArray = [[NSArray alloc] init];
-    
-    _hostName = @"itunes.apple.com";
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
-    
+    _hostName = @"itunes.apple.com";
     hostReach = [Reachability reachabilityWithHostName:_hostName];
     [hostReach startNotifier];
-    [self updateReachabilityStatus:hostReach];
+        [self updateReachabilityStatus:hostReach];
     
     internetReach = [Reachability reachabilityWithHostName:_hostName];
     [internetReach startNotifier];
     [self updateReachabilityStatus:internetReach];
-    
-}
-
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    _characterArray = [[NSArray alloc] init];
     return YES;
 }
 

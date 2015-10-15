@@ -14,15 +14,16 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-@property (nonatomic, strong) NSString      *hostName;
-@property (nonatomic, strong) NSArray       *iTunesArray;
-@property (nonatomic, weak)   IBOutlet  UITableView     *iTunesTableView;
+@property (readonly, strong, nonatomic)            NSManagedObjectContext       *managedObjectContext;
+@property (readonly, strong, nonatomic)            NSManagedObjectModel         *managedObjectModel;
+@property (readonly, strong, nonatomic)            NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (nonatomic, strong)                      NSString                     *hostName;
+@property (nonatomic, strong)                      NSArray                      *characterArray;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
+- (NSString *)getDocumentsDirectory;
+- (void)getDataForSearch:(NSString *)searchString;
 
 
 @end
