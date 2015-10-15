@@ -16,32 +16,14 @@
 		55EF295F1BCEF4190020C26F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55EF295D1BCEF4190020C26F /* LaunchScreen.storyboard */; };
 		55EF29671BCEF4250020C26F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55EF29661BCEF4250020C26F /* AVFoundation.framework */; };
 		55EF296B1BCEF68D0020C26F /* EasterEggViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EF296A1BCEF68D0020C26F /* EasterEggViewController.m */; settings = {ASSET_TAGS = (); }; };
-		55EF29871BCF157F0020C26F /* ChewbaccaSound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF296D1BCF157F0020C26F /* ChewbaccaSound1.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF29881BCF157F0020C26F /* ChewbaccaSound10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF296E1BCF157F0020C26F /* ChewbaccaSound10.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF29891BCF157F0020C26F /* ChewbaccaSound11.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF296F1BCF157F0020C26F /* ChewbaccaSound11.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF298A1BCF157F0020C26F /* ChewbaccaSound12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29701BCF157F0020C26F /* ChewbaccaSound12.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF298B1BCF157F0020C26F /* ChewbaccaSound13.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29711BCF157F0020C26F /* ChewbaccaSound13.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF298C1BCF157F0020C26F /* ChewbaccaSound14.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29721BCF157F0020C26F /* ChewbaccaSound14.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF298D1BCF157F0020C26F /* ChewbaccaSound15.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29731BCF157F0020C26F /* ChewbaccaSound15.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF298E1BCF157F0020C26F /* ChewbaccaSound16.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29741BCF157F0020C26F /* ChewbaccaSound16.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF298F1BCF157F0020C26F /* ChewbaccaSound17.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29751BCF157F0020C26F /* ChewbaccaSound17.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF29901BCF157F0020C26F /* ChewbaccaSound18.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29761BCF157F0020C26F /* ChewbaccaSound18.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF29911BCF157F0020C26F /* ChewbaccaSound19.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29771BCF157F0020C26F /* ChewbaccaSound19.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF29921BCF157F0020C26F /* ChewbaccaSound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29781BCF157F0020C26F /* ChewbaccaSound2.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF29931BCF157F0020C26F /* ChewbaccaSound20.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29791BCF157F0020C26F /* ChewbaccaSound20.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF29941BCF157F0020C26F /* ChewbaccaSound21.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF297A1BCF157F0020C26F /* ChewbaccaSound21.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF29951BCF157F0020C26F /* ChewbaccaSound22.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF297B1BCF157F0020C26F /* ChewbaccaSound22.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF29961BCF157F0020C26F /* ChewbaccaSound23.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF297C1BCF157F0020C26F /* ChewbaccaSound23.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF29971BCF157F0020C26F /* ChewbaccaSound24.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF297D1BCF157F0020C26F /* ChewbaccaSound24.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF29981BCF157F0020C26F /* ChewbaccaSound25.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF297E1BCF157F0020C26F /* ChewbaccaSound25.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF29991BCF157F0020C26F /* ChewbaccaSound26.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF297F1BCF157F0020C26F /* ChewbaccaSound26.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF299A1BCF157F0020C26F /* ChewbaccaSound3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29801BCF157F0020C26F /* ChewbaccaSound3.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF299B1BCF157F0020C26F /* ChewbaccaSound4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29811BCF157F0020C26F /* ChewbaccaSound4.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF299C1BCF157F0020C26F /* ChewbaccaSound5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29821BCF157F0020C26F /* ChewbaccaSound5.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF299D1BCF157F0020C26F /* ChewbaccaSound6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29831BCF157F0020C26F /* ChewbaccaSound6.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF299E1BCF157F0020C26F /* ChewbaccaSound7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29841BCF157F0020C26F /* ChewbaccaSound7.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF299F1BCF157F0020C26F /* ChewbaccaSound8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29851BCF157F0020C26F /* ChewbaccaSound8.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF29A01BCF157F0020C26F /* ChewbaccaSound9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29861BCF157F0020C26F /* ChewbaccaSound9.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF29AA1BCF3B240020C26F /* ChewbaccaSound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A21BCF3B240020C26F /* ChewbaccaSound1.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF29AB1BCF3B240020C26F /* ChewbaccaSound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A31BCF3B240020C26F /* ChewbaccaSound2.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF29AC1BCF3B240020C26F /* ChewbaccaSound3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A41BCF3B240020C26F /* ChewbaccaSound3.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF29AD1BCF3B240020C26F /* ChewbaccaSound4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A51BCF3B240020C26F /* ChewbaccaSound4.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF29AE1BCF3B240020C26F /* ChewbaccaSound5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A61BCF3B240020C26F /* ChewbaccaSound5.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF29AF1BCF3B240020C26F /* ChewbaccaSound6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A71BCF3B240020C26F /* ChewbaccaSound6.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF29B01BCF3B240020C26F /* ChewbaccaSound7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A81BCF3B240020C26F /* ChewbaccaSound7.mp3 */; settings = {ASSET_TAGS = (); }; };
+		55EF29B11BCF3B240020C26F /* ChewbaccaSound8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A91BCF3B240020C26F /* ChewbaccaSound8.mp3 */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,32 +41,14 @@
 		55EF29661BCEF4250020C26F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		55EF29691BCEF68D0020C26F /* EasterEggViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasterEggViewController.h; sourceTree = "<group>"; };
 		55EF296A1BCEF68D0020C26F /* EasterEggViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasterEggViewController.m; sourceTree = "<group>"; };
-		55EF296D1BCF157F0020C26F /* ChewbaccaSound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound1.mp3; sourceTree = "<group>"; };
-		55EF296E1BCF157F0020C26F /* ChewbaccaSound10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound10.mp3; sourceTree = "<group>"; };
-		55EF296F1BCF157F0020C26F /* ChewbaccaSound11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound11.mp3; sourceTree = "<group>"; };
-		55EF29701BCF157F0020C26F /* ChewbaccaSound12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound12.mp3; sourceTree = "<group>"; };
-		55EF29711BCF157F0020C26F /* ChewbaccaSound13.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound13.mp3; sourceTree = "<group>"; };
-		55EF29721BCF157F0020C26F /* ChewbaccaSound14.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound14.mp3; sourceTree = "<group>"; };
-		55EF29731BCF157F0020C26F /* ChewbaccaSound15.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound15.mp3; sourceTree = "<group>"; };
-		55EF29741BCF157F0020C26F /* ChewbaccaSound16.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound16.mp3; sourceTree = "<group>"; };
-		55EF29751BCF157F0020C26F /* ChewbaccaSound17.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound17.mp3; sourceTree = "<group>"; };
-		55EF29761BCF157F0020C26F /* ChewbaccaSound18.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound18.mp3; sourceTree = "<group>"; };
-		55EF29771BCF157F0020C26F /* ChewbaccaSound19.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound19.mp3; sourceTree = "<group>"; };
-		55EF29781BCF157F0020C26F /* ChewbaccaSound2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound2.mp3; sourceTree = "<group>"; };
-		55EF29791BCF157F0020C26F /* ChewbaccaSound20.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound20.mp3; sourceTree = "<group>"; };
-		55EF297A1BCF157F0020C26F /* ChewbaccaSound21.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound21.mp3; sourceTree = "<group>"; };
-		55EF297B1BCF157F0020C26F /* ChewbaccaSound22.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound22.mp3; sourceTree = "<group>"; };
-		55EF297C1BCF157F0020C26F /* ChewbaccaSound23.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound23.mp3; sourceTree = "<group>"; };
-		55EF297D1BCF157F0020C26F /* ChewbaccaSound24.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound24.mp3; sourceTree = "<group>"; };
-		55EF297E1BCF157F0020C26F /* ChewbaccaSound25.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound25.mp3; sourceTree = "<group>"; };
-		55EF297F1BCF157F0020C26F /* ChewbaccaSound26.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound26.mp3; sourceTree = "<group>"; };
-		55EF29801BCF157F0020C26F /* ChewbaccaSound3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound3.mp3; sourceTree = "<group>"; };
-		55EF29811BCF157F0020C26F /* ChewbaccaSound4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound4.mp3; sourceTree = "<group>"; };
-		55EF29821BCF157F0020C26F /* ChewbaccaSound5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound5.mp3; sourceTree = "<group>"; };
-		55EF29831BCF157F0020C26F /* ChewbaccaSound6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound6.mp3; sourceTree = "<group>"; };
-		55EF29841BCF157F0020C26F /* ChewbaccaSound7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound7.mp3; sourceTree = "<group>"; };
-		55EF29851BCF157F0020C26F /* ChewbaccaSound8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound8.mp3; sourceTree = "<group>"; };
-		55EF29861BCF157F0020C26F /* ChewbaccaSound9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound9.mp3; sourceTree = "<group>"; };
+		55EF29A21BCF3B240020C26F /* ChewbaccaSound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound1.mp3; sourceTree = "<group>"; };
+		55EF29A31BCF3B240020C26F /* ChewbaccaSound2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound2.mp3; sourceTree = "<group>"; };
+		55EF29A41BCF3B240020C26F /* ChewbaccaSound3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound3.mp3; sourceTree = "<group>"; };
+		55EF29A51BCF3B240020C26F /* ChewbaccaSound4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound4.mp3; sourceTree = "<group>"; };
+		55EF29A61BCF3B240020C26F /* ChewbaccaSound5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound5.mp3; sourceTree = "<group>"; };
+		55EF29A71BCF3B240020C26F /* ChewbaccaSound6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound6.mp3; sourceTree = "<group>"; };
+		55EF29A81BCF3B240020C26F /* ChewbaccaSound7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound7.mp3; sourceTree = "<group>"; };
+		55EF29A91BCF3B240020C26F /* ChewbaccaSound8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ChewbaccaSound8.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +66,7 @@
 		55EF29401BCEF4190020C26F = {
 			isa = PBXGroup;
 			children = (
+				55EF29A11BCF3B240020C26F /* Chewey Audio */,
 				55EF29661BCEF4250020C26F /* AVFoundation.framework */,
 				55EF294B1BCEF4190020C26F /* Holocron */,
 				55EF294A1BCEF4190020C26F /* Products */,
@@ -126,7 +91,6 @@
 				55EF29691BCEF68D0020C26F /* EasterEggViewController.h */,
 				55EF296A1BCEF68D0020C26F /* EasterEggViewController.m */,
 				55EF29551BCEF4190020C26F /* Main.storyboard */,
-				55EF296C1BCF157F0020C26F /* Chewey Audio */,
 				55EF295B1BCEF4190020C26F /* Assets.xcassets */,
 				55EF295D1BCEF4190020C26F /* LaunchScreen.storyboard */,
 				55EF29601BCEF4190020C26F /* Info.plist */,
@@ -152,35 +116,17 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
-		55EF296C1BCF157F0020C26F /* Chewey Audio */ = {
+		55EF29A11BCF3B240020C26F /* Chewey Audio */ = {
 			isa = PBXGroup;
 			children = (
-				55EF296D1BCF157F0020C26F /* ChewbaccaSound1.mp3 */,
-				55EF296E1BCF157F0020C26F /* ChewbaccaSound10.mp3 */,
-				55EF296F1BCF157F0020C26F /* ChewbaccaSound11.mp3 */,
-				55EF29701BCF157F0020C26F /* ChewbaccaSound12.mp3 */,
-				55EF29711BCF157F0020C26F /* ChewbaccaSound13.mp3 */,
-				55EF29721BCF157F0020C26F /* ChewbaccaSound14.mp3 */,
-				55EF29731BCF157F0020C26F /* ChewbaccaSound15.mp3 */,
-				55EF29741BCF157F0020C26F /* ChewbaccaSound16.mp3 */,
-				55EF29751BCF157F0020C26F /* ChewbaccaSound17.mp3 */,
-				55EF29761BCF157F0020C26F /* ChewbaccaSound18.mp3 */,
-				55EF29771BCF157F0020C26F /* ChewbaccaSound19.mp3 */,
-				55EF29781BCF157F0020C26F /* ChewbaccaSound2.mp3 */,
-				55EF29791BCF157F0020C26F /* ChewbaccaSound20.mp3 */,
-				55EF297A1BCF157F0020C26F /* ChewbaccaSound21.mp3 */,
-				55EF297B1BCF157F0020C26F /* ChewbaccaSound22.mp3 */,
-				55EF297C1BCF157F0020C26F /* ChewbaccaSound23.mp3 */,
-				55EF297D1BCF157F0020C26F /* ChewbaccaSound24.mp3 */,
-				55EF297E1BCF157F0020C26F /* ChewbaccaSound25.mp3 */,
-				55EF297F1BCF157F0020C26F /* ChewbaccaSound26.mp3 */,
-				55EF29801BCF157F0020C26F /* ChewbaccaSound3.mp3 */,
-				55EF29811BCF157F0020C26F /* ChewbaccaSound4.mp3 */,
-				55EF29821BCF157F0020C26F /* ChewbaccaSound5.mp3 */,
-				55EF29831BCF157F0020C26F /* ChewbaccaSound6.mp3 */,
-				55EF29841BCF157F0020C26F /* ChewbaccaSound7.mp3 */,
-				55EF29851BCF157F0020C26F /* ChewbaccaSound8.mp3 */,
-				55EF29861BCF157F0020C26F /* ChewbaccaSound9.mp3 */,
+				55EF29A21BCF3B240020C26F /* ChewbaccaSound1.mp3 */,
+				55EF29A31BCF3B240020C26F /* ChewbaccaSound2.mp3 */,
+				55EF29A41BCF3B240020C26F /* ChewbaccaSound3.mp3 */,
+				55EF29A51BCF3B240020C26F /* ChewbaccaSound4.mp3 */,
+				55EF29A61BCF3B240020C26F /* ChewbaccaSound5.mp3 */,
+				55EF29A71BCF3B240020C26F /* ChewbaccaSound6.mp3 */,
+				55EF29A81BCF3B240020C26F /* ChewbaccaSound7.mp3 */,
+				55EF29A91BCF3B240020C26F /* ChewbaccaSound8.mp3 */,
 			);
 			path = "Chewey Audio";
 			sourceTree = "<group>";
@@ -242,35 +188,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55EF298B1BCF157F0020C26F /* ChewbaccaSound13.mp3 in Resources */,
-				55EF299D1BCF157F0020C26F /* ChewbaccaSound6.mp3 in Resources */,
-				55EF29871BCF157F0020C26F /* ChewbaccaSound1.mp3 in Resources */,
-				55EF29911BCF157F0020C26F /* ChewbaccaSound19.mp3 in Resources */,
+				55EF29AE1BCF3B240020C26F /* ChewbaccaSound5.mp3 in Resources */,
+				55EF29AC1BCF3B240020C26F /* ChewbaccaSound3.mp3 in Resources */,
+				55EF29AA1BCF3B240020C26F /* ChewbaccaSound1.mp3 in Resources */,
+				55EF29AF1BCF3B240020C26F /* ChewbaccaSound6.mp3 in Resources */,
+				55EF29AD1BCF3B240020C26F /* ChewbaccaSound4.mp3 in Resources */,
+				55EF29AB1BCF3B240020C26F /* ChewbaccaSound2.mp3 in Resources */,
+				55EF29B01BCF3B240020C26F /* ChewbaccaSound7.mp3 in Resources */,
 				55EF295F1BCEF4190020C26F /* LaunchScreen.storyboard in Resources */,
-				55EF29941BCF157F0020C26F /* ChewbaccaSound21.mp3 in Resources */,
-				55EF298A1BCF157F0020C26F /* ChewbaccaSound12.mp3 in Resources */,
-				55EF298D1BCF157F0020C26F /* ChewbaccaSound15.mp3 in Resources */,
-				55EF29921BCF157F0020C26F /* ChewbaccaSound2.mp3 in Resources */,
-				55EF299C1BCF157F0020C26F /* ChewbaccaSound5.mp3 in Resources */,
-				55EF29891BCF157F0020C26F /* ChewbaccaSound11.mp3 in Resources */,
-				55EF298C1BCF157F0020C26F /* ChewbaccaSound14.mp3 in Resources */,
-				55EF29991BCF157F0020C26F /* ChewbaccaSound26.mp3 in Resources */,
-				55EF298E1BCF157F0020C26F /* ChewbaccaSound16.mp3 in Resources */,
-				55EF298F1BCF157F0020C26F /* ChewbaccaSound17.mp3 in Resources */,
-				55EF299E1BCF157F0020C26F /* ChewbaccaSound7.mp3 in Resources */,
 				55EF295C1BCEF4190020C26F /* Assets.xcassets in Resources */,
-				55EF29961BCF157F0020C26F /* ChewbaccaSound23.mp3 in Resources */,
-				55EF299B1BCF157F0020C26F /* ChewbaccaSound4.mp3 in Resources */,
-				55EF299F1BCF157F0020C26F /* ChewbaccaSound8.mp3 in Resources */,
-				55EF29971BCF157F0020C26F /* ChewbaccaSound24.mp3 in Resources */,
+				55EF29B11BCF3B240020C26F /* ChewbaccaSound8.mp3 in Resources */,
 				55EF29571BCEF4190020C26F /* Main.storyboard in Resources */,
-				55EF29951BCF157F0020C26F /* ChewbaccaSound22.mp3 in Resources */,
-				55EF29A01BCF157F0020C26F /* ChewbaccaSound9.mp3 in Resources */,
-				55EF29881BCF157F0020C26F /* ChewbaccaSound10.mp3 in Resources */,
-				55EF29931BCF157F0020C26F /* ChewbaccaSound20.mp3 in Resources */,
-				55EF29901BCF157F0020C26F /* ChewbaccaSound18.mp3 in Resources */,
-				55EF29981BCF157F0020C26F /* ChewbaccaSound25.mp3 in Resources */,
-				55EF299A1BCF157F0020C26F /* ChewbaccaSound3.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

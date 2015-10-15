@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface EasterEggViewController : UIViewController
+@interface EasterEggViewController : UIViewController <AVAudioPlayerDelegate>
 
 @end
