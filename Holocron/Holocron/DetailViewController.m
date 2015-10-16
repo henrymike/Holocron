@@ -31,15 +31,28 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    NSLog(@"Character Name:%@",[_selectedCharacter objectForKey:@"name"]);
+//    NSLog(@"Character Name:%@",[_selectedCharacter objectForKey:@"name"]);
+    
+    _characterHomePlanet.text = @"Home Planet Unknown";
     _characterSpecies.text = @"Species Unknown";
+    _characterBioTextView.text = @"Bio Unknown";
+    
+    
+    if ([_selectedCharacter objectForKey:@"name"] != [NSNull null]) {
     _characterName.text = [_selectedCharacter objectForKey:@"name"];
+    }
+    if ([_selectedCharacter objectForKey:@"homeworld"] != [NSNull null]) {
     _characterHomePlanet.text = [_selectedCharacter objectForKey:@"homeworld"];
+    }
     if ([_selectedCharacter objectForKey:@"species"] != [NSNull null]) {
         _characterSpecies.text = [_selectedCharacter objectForKey:@"species"];
     }
+    if ([_selectedCharacter objectForKey:@"summary"] != [NSNull null]) {
     _characterBioTextView.text = [_selectedCharacter objectForKey:@"summary"];
+    }
+    if ([_selectedCharacter objectForKey:@"image"] != [NSNull null]) {
     _characterImage.image = [UIImage imageNamed:[_selectedCharacter objectForKey:@"image"]];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
