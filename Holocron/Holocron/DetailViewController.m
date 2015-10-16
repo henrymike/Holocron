@@ -69,9 +69,9 @@
 //    if ([_selectedCharacter objectForKey:@"external_uri"] != [NSNull null]) {
 //        _characterURI = [_selectedCharacter objectForKey:@"external_uri"];
 //    }
-    if ([_selectedCharacter objectForKey:@"image"] != [NSNull null]) {
-    _characterImage.image = [UIImage imageNamed:[_selectedCharacter objectForKey:@"image"]];
-    }
+//    if ([_selectedCharacter objectForKey:@"image"] != [NSNull null]) {
+//    _characterImage.image = [UIImage imageNamed:[_selectedCharacter objectForKey:@"image"]];
+//    }
     
     if ([_selectedCharacter objectForKey:@"image"] != [NSNull null]) {
         NSString *fileNameURL = [_selectedCharacter objectForKey:@"image"];

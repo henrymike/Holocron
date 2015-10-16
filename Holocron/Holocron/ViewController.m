@@ -91,7 +91,7 @@
             NSLog(@"Local %@",fileNameFull);
             cell.imageView.image = [UIImage imageNamed:[[_appDelegate getDocumentsDirectory] stringByAppendingPathComponent:fileNameFull]];
         } else {
-            NSLog(@"Not Local %@",fileNameURL);
+            NSLog(@"Not Local %@ %@",[selectedResult objectForKey:@"name"],fileNameURL);
             [_appDelegate getImageFromServer:fileNameFull fromURL:fileNameURL atIndexPath:indexPath];
         }
     }
