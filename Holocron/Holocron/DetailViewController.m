@@ -18,10 +18,26 @@
 @property (nonatomic, weak) IBOutlet UILabel     *characterHomePlanet;
 @property (nonatomic, weak) IBOutlet UILabel     *characterSpecies;
 @property (nonatomic, weak) IBOutlet UITextView  *characterBioTextView;
+@property (nonatomic, weak) IBOutlet UIButton    *characterURIButton;
 
 @end
 
 @implementation DetailViewController
+
+
+
+#pragma mark - Interactivity Methods
+
+- (IBAction)characterURIButtonPressed:(id)sender {
+    NSLog(@"URI Button Pressed URI:%@",_characterURIButton);
+    SFSafariViewController *charURI = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:[_selectedCharacter objectForKey:@"external_uri"]]];
+//    SFSafariViewController *charURI = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:@"BLAH"]];
+//    SFSafariViewController *charURI = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:@"http://www.recode.net"]];
+//    SFSafariViewController *charURI = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:@"%@",_characterURI]];
+    [self.navigationController presentViewController:charURI animated:true completion:nil];
+}
+
+#pragma mark - Life Cycle Methods
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -50,6 +66,9 @@
     if ([_selectedCharacter objectForKey:@"summary"] != [NSNull null]) {
     _characterBioTextView.text = [_selectedCharacter objectForKey:@"summary"];
     }
+//    if ([_selectedCharacter objectForKey:@"external_uri"] != [NSNull null]) {
+//        _characterURI = [_selectedCharacter objectForKey:@"external_uri"];
+//    }
     if ([_selectedCharacter objectForKey:@"image"] != [NSNull null]) {
     _characterImage.image = [UIImage imageNamed:[_selectedCharacter objectForKey:@"image"]];
     }

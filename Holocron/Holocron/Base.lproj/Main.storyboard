@@ -308,6 +308,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTe-bV-zQe">
+                                <rect key="frame" x="205" y="158" width="160" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="View on Wookiepedia"/>
+                                <connections>
+                                    <action selector="characterURIButtonPressed:" destination="sgn-M6-s32" eventType="touchUpInside" id="MCx-ss-f1p"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -334,6 +343,7 @@
                         <outlet property="characterImage" destination="dM2-yh-P4h" id="UMn-7L-whv"/>
                         <outlet property="characterName" destination="Kuk-eH-h09" id="EIJ-MF-uaQ"/>
                         <outlet property="characterSpecies" destination="cFf-fB-s04" id="Riy-dF-7dE"/>
+                        <outlet property="characterURIButton" destination="gTe-bV-zQe" id="RaX-lN-VTQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNG-Ya-14N" userLabel="First Responder" sceneMemberID="firstResponder"/>

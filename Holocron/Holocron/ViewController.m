@@ -96,9 +96,6 @@
         NSLog(@"Character Name:%@",[selectedCharacter objectForKey:@"name"]);
         destController.selectedCharacter = selectedCharacter;
     }
-//    if ([[segue identifier] isEqualToString:@"segueChewey"]) {
-//        nil;
-//    }
 }
 
 

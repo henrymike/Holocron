@@ -27,7 +27,7 @@ bool serverAvailable;
 - (void)getDataForSearch:(NSString *)searchString {
     NSLog(@"Get data");
 //    NSURL *fileURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://%@/search?term=%@",_hostName,searchString]];
-    NSURL *fileURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://%@/api/characters",_hostName]];
+    NSURL *fileURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/api/characters",_hostName]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:fileURL];
     [request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
@@ -153,8 +153,8 @@ bool serverAvailable;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
-//    _hostName = @"itunes.apple.com";
-    _hostName = @"datapad.herokuapp.com";
+//    _hostName = @"datapad.herokuapp.com";
+    _hostName = @"10.1.10.189:3000";
     hostReach = [Reachability reachabilityWithHostName:_hostName];
     [hostReach startNotifier];
         [self updateReachabilityStatus:hostReach];
