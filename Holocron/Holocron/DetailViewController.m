@@ -73,11 +73,13 @@
     _characterImage.image = [UIImage imageNamed:[_selectedCharacter objectForKey:@"image"]];
     }
     
-    NSString *fileNameURL = [_selectedCharacter objectForKey:@"image"];
-    NSString *fileNameFull = [fileNameURL stringByReplacingOccurrencesOfString:@"/" withString:@""];
-    NSLog(@"Files %@ & %@",fileNameFull,fileNameURL);
-    fileNameFull = [fileNameFull stringByReplacingOccurrencesOfString:@":" withString:@""];
-    _characterImage.image = [UIImage imageNamed:[[_appDelegate getDocumentsDirectory] stringByAppendingPathComponent:fileNameFull]];
+    if ([_selectedCharacter objectForKey:@"image"] != [NSNull null]) {
+        NSString *fileNameURL = [_selectedCharacter objectForKey:@"image"];
+        NSString *fileNameFull = [fileNameURL stringByReplacingOccurrencesOfString:@"/" withString:@""];
+        NSLog(@"Files %@ & %@",fileNameFull,fileNameURL);
+        fileNameFull = [fileNameFull stringByReplacingOccurrencesOfString:@":" withString:@""];
+        _characterImage.image = [UIImage imageNamed:[[_appDelegate getDocumentsDirectory] stringByAppendingPathComponent:fileNameFull]];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
