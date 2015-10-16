@@ -20,7 +20,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iyD-Ra-fb4">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" id="A3N-tn-JhY">
+                                <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search all Star Wars characters" id="A3N-tn-JhY">
                                     <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -55,18 +55,40 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="VGI-MK-XYF"/>
                                 </connections>
                             </tableView>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r0I-Dr-cMg">
+                                <rect key="frame" x="0.0" y="551" width="600" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="5Uf-5g-weL"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem title="Jedi" image="icon_jedi" id="CU9-PM-gIf"/>
+                                    <tabBarItem tag="1" title="Sith" image="icon_sith" id="VuD-9I-DYE"/>
+                                    <tabBarItem tag="2" title="Rebels" image="icon_rebels" id="xHs-Tq-jc5"/>
+                                    <tabBarItem tag="3" title="Empire" image="icon_empire" id="ssA-Kx-OtM"/>
+                                    <tabBarItem tag="4" title="Droids" image="icon_droids" id="xUA-Jn-tih"/>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="h1d-Db-mVO"/>
+                                </connections>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="r0I-Dr-cMg" secondAttribute="bottom" id="8dk-bN-hsu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iyD-Ra-fb4" secondAttribute="bottom" id="bGE-Ce-Rdn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="r0I-Dr-cMg" secondAttribute="trailing" constant="-20" id="iRt-US-gmt"/>
                             <constraint firstItem="iyD-Ra-fb4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="jYi-TJ-QZf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iyD-Ra-fb4" secondAttribute="trailing" constant="-20" id="pd6-V2-fCQ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iyD-Ra-fb4" secondAttribute="bottom" constant="-9" id="rrw-7t-QDP"/>
+                            <constraint firstItem="r0I-Dr-cMg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="s8P-pn-xBz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iyD-Ra-fb4" secondAttribute="bottom" id="uA4-Y4-Gt7"/>
                             <constraint firstItem="iyD-Ra-fb4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ysr-Vo-b6v"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="rrw-7t-QDP"/>
+                                <exclude reference="uA4-Y4-Gt7"/>
                             </mask>
                         </variation>
                     </view>
@@ -80,7 +102,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="characterTableView" destination="iyD-Ra-fb4" id="abv-db-T8w"/>
+                        <outlet property="droidsTabBarItem" destination="xUA-Jn-tih" id="dtP-g5-YMg"/>
+                        <outlet property="empireTabBarItem" destination="ssA-Kx-OtM" id="Mi4-0u-pDI"/>
+                        <outlet property="jediTabBarItem" destination="CU9-PM-gIf" id="SMI-sJ-BvI"/>
+                        <outlet property="rebelsTabBarItem" destination="xHs-Tq-jc5" id="s7i-vY-GXL"/>
                         <outlet property="resultsSearchBar" destination="A3N-tn-JhY" id="wSB-hg-vQw"/>
+                        <outlet property="sithTabBarItem" destination="VuD-9I-DYE" id="pcf-nO-9op"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -329,6 +356,11 @@
     <resources>
         <image name="chewey" width="167" height="346"/>
         <image name="icon_chewbacca" width="30" height="30"/>
+        <image name="icon_droids" width="25" height="25"/>
+        <image name="icon_empire" width="25" height="25"/>
+        <image name="icon_jedi" width="25" height="25"/>
+        <image name="icon_rebels" width="25" height="25"/>
+        <image name="icon_sith" width="25" height="25"/>
         <image name="millenium_falcon" width="117" height="136"/>
     </resources>
 </document>

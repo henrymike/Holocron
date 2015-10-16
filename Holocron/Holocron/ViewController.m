@@ -15,6 +15,12 @@
 @property (nonatomic, strong)              AppDelegate    *appDelegate;
 @property (nonatomic, weak)   IBOutlet     UITableView    *characterTableView;
 @property (nonatomic, weak)   IBOutlet     UISearchBar    *resultsSearchBar;
+@property (nonatomic, weak)   IBOutlet     UITabBarItem   *jediTabBarItem;
+@property (nonatomic, weak)   IBOutlet     UITabBarItem   *sithTabBarItem;
+@property (nonatomic, weak)   IBOutlet     UITabBarItem   *rebelsTabBarItem;
+@property (nonatomic, weak)   IBOutlet     UITabBarItem   *empireTabBarItem;
+@property (nonatomic, weak)   IBOutlet     UITabBarItem   *droidsTabBarItem;
+
 
 @end
 
@@ -25,6 +31,31 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     NSLog(@"Search Pressed");
     [_appDelegate getDataForSearch:_resultsSearchBar.text];
+}
+
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
+    if(item.tag == 0)
+    {
+        NSLog(@"Jedi tab selected");
+        _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for Jedi"];
+//        [_appDelegate getDataForSearch:[NSString stringWithFormat:@"%@ %@",_resultsSearchBar.text,_resultsSearchBar.text]];
+    }
+    if (item.tag == 1) {
+        NSLog(@"Sith tab selected");
+        _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for Sith"];
+    }
+    if (item.tag == 2) {
+        NSLog(@"Rebels tab selected");
+        _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for Rebels"];
+    }
+    if (item.tag == 3) {
+        NSLog(@"Empire tab selected");
+        _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for Imperials"];
+    }
+    if (item.tag == 4) {
+        NSLog(@"Droids tab selected");
+        _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for Droids"];
+    }
 }
 
 #pragma mark - Table View Methods
