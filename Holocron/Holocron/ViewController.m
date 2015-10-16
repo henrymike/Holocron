@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "DetailViewController.h"
+#import "EasterEggViewController.h"
 
 @interface ViewController ()
 
@@ -88,10 +89,16 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    DetailViewController *destController = [segue destinationViewController];
-    NSIndexPath *indexPath = [_characterTableView indexPathForSelectedRow];
-    NSDictionary *selectedCharacter = _appDelegate.characterArray[indexPath.row];
-    destController.selectedCharacter = selectedCharacter;
+    if ([[segue identifier] isEqualToString:@"segueDetail"]) {
+        DetailViewController *destController = [segue destinationViewController];
+        NSIndexPath *indexPath = [_characterTableView indexPathForSelectedRow];
+        NSDictionary *selectedCharacter = _appDelegate.characterArray[indexPath.row];
+        NSLog(@"Character Name:%@",[selectedCharacter objectForKey:@"name"]);
+        destController.selectedCharacter = selectedCharacter;
+    }
+//    if ([[segue identifier] isEqualToString:@"segueChewey"]) {
+//        nil;
+//    }
 }
 
 

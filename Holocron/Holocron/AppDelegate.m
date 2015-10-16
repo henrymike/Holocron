@@ -27,7 +27,7 @@ bool serverAvailable;
 - (void)getDataForSearch:(NSString *)searchString {
     NSLog(@"Get data");
 //    NSURL *fileURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://%@/search?term=%@",_hostName,searchString]];
-    NSURL *fileURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/api/characters",_hostName]];
+    NSURL *fileURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://%@/api/characters",_hostName]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:fileURL];
     [request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
@@ -36,11 +36,11 @@ bool serverAvailable;
     [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (([data length] > 0) && (error == nil)) {
             NSJSONSerialization *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-            NSLog(@"Got data %@",json);
+//            NSLog(@"Got data %@",json);
             _characterArray = [(NSDictionary *) json objectForKey:@"characters"];
-            for (NSDictionary *resultsDict in _characterArray) {
-                NSLog(@"Character Name:%@",[resultsDict objectForKey:@"name"]);
-            }
+//            for (NSDictionary *resultsDict in _characterArray) {
+//                NSLog(@"Character Name:%@",[resultsDict objectForKey:@"name"]);
+//            }
             dispatch_async(dispatch_get_main_queue(), ^{
                 NSLog(@"Async");
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"gotCharactersNotification" object:nil];
@@ -154,7 +154,7 @@ bool serverAvailable;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
 //    _hostName = @"itunes.apple.com";
-    _hostName = @"10.1.10.189:3000";
+    _hostName = @"datapad.herokuapp.com";
     hostReach = [Reachability reachabilityWithHostName:_hostName];
     [hostReach startNotifier];
         [self updateReachabilityStatus:hostReach];

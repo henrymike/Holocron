@@ -31,9 +31,13 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    NSLog(@"Character Name:%@",[_selectedCharacter objectForKey:@"name"]);
+    _characterSpecies.text = @"Species Unknown";
     _characterName.text = [_selectedCharacter objectForKey:@"name"];
     _characterHomePlanet.text = [_selectedCharacter objectForKey:@"homeworld"];
-    _characterSpecies.text = [_selectedCharacter objectForKey:@"species"];
+    if ([_selectedCharacter objectForKey:@"species"] != [NSNull null]) {
+        _characterSpecies.text = [_selectedCharacter objectForKey:@"species"];
+    }
     _characterBioTextView.text = [_selectedCharacter objectForKey:@"summary"];
     _characterImage.image = [UIImage imageNamed:[_selectedCharacter objectForKey:@"image"]];
 }
