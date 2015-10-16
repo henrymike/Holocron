@@ -80,12 +80,34 @@
     NSDictionary *selectedResult = _appDelegate.characterArray[indexPath.row];
     cell.textLabel.text = [selectedResult objectForKey:@"name"];
     
+    // fetch and load images
+    if ([selectedResult objectForKey:@"image"] != [NSNull null]) {
+        NSString *fileNameURL = [selectedResult objectForKey:@"image"];
+        NSString *fileNameFull = [fileNameURL stringByReplacingOccurrencesOfString:@"/" withString:@""];
+        NSLog(@"Files %@ & %@",fileNameFull,fileNameURL);
+        fileNameFull = [fileNameFull stringByReplacingOccurrencesOfString:@":" withString:@""];
+        
+        if ([_appDelegate fileIsLocal:fileNameFull]) {
+            NSLog(@"Local %@",fileNameFull);
+            cell.imageView.image = [UIImage imageNamed:[[_appDelegate getDocumentsDirectory] stringByAppendingPathComponent:fileNameFull]];
+        } else {
+            NSLog(@"Not Local %@",fileNameURL);
+            [_appDelegate getImageFromServer:fileNameFull fromURL:fileNameURL atIndexPath:indexPath];
+        }
+    }
+    
     return cell;
 }
 
 - (void)gotCharacterReceived {
     NSLog(@"GCR");
     [_characterTableView reloadData];
+}
+
+- (void)gotImageReceived {
+    NSLog(@"Got Image");
+//    [_characterTableView reloadRowsAtIndexPaths:@[] withRowAnimation:[UITableViewRowAnimationAutomatic];
+//  [_characterTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -105,6 +127,7 @@
     [super viewDidLoad];
     _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotCharacterReceived) name:@"gotCharactersNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotImageReceived) name:@"gotImagesNotification" object:nil];
     
 }
 

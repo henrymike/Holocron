@@ -308,9 +308,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTe-bV-zQe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTe-bV-zQe">
                                 <rect key="frame" x="205" y="158" width="160" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="hTK-kT-PQf"/>
+                                    <constraint firstAttribute="height" constant="30" id="wkE-a5-MvJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="View on Wookiepedia"/>
                                 <connections>
@@ -322,7 +326,9 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="6us-Ci-Nr0" secondAttribute="trailing" id="0Uw-3o-xZe"/>
                             <constraint firstItem="Kuk-eH-h09" firstAttribute="leading" secondItem="dM2-yh-P4h" secondAttribute="trailing" constant="20" id="6h5-9l-G2g"/>
+                            <constraint firstItem="gTe-bV-zQe" firstAttribute="top" secondItem="Kuk-eH-h09" secondAttribute="bottom" constant="54" id="EqP-A7-jR2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cFf-fB-s04" secondAttribute="trailing" id="G9r-fK-VrS"/>
+                            <constraint firstItem="gTe-bV-zQe" firstAttribute="leading" secondItem="dM2-yh-P4h" secondAttribute="trailing" constant="20" id="Hfb-0n-9Xl"/>
                             <constraint firstItem="cFf-fB-s04" firstAttribute="top" secondItem="Kuk-eH-h09" secondAttribute="bottom" constant="25" id="Lq4-zF-sDe"/>
                             <constraint firstItem="dM2-yh-P4h" firstAttribute="top" secondItem="JfP-NL-HeQ" secondAttribute="bottom" constant="14" id="Of9-bb-vwI"/>
                             <constraint firstItem="6us-Ci-Nr0" firstAttribute="top" secondItem="dM2-yh-P4h" secondAttribute="bottom" constant="8" id="Q9Q-SK-thn"/>

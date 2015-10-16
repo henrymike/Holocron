@@ -23,7 +23,9 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 - (NSString *)getDocumentsDirectory;
+- (BOOL)fileIsLocal:(NSString *)filename;
 - (void)getDataForSearch:(NSString *)searchString;
+- (void)getImageFromServer:(NSString *)localFileName fromURL:(NSString *)fullFileName atIndexPath:(NSIndexPath *)indexPath;
 
 
 @end

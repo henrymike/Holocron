@@ -70,9 +70,10 @@ bool serverAvailable;
                 UIImage *imageTemp = [UIImage imageWithData:data];
                 if (imageTemp != nil) {
                     [data writeToFile:savedFilePath atomically:true];
-//                    dispatch_async(dispatch_get_main_queue(), ^{
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [[NSNotificationCenter defaultCenter] postNotificationName:@"gotImagesNotification" object:nil];
 //                        [_characterTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-//                    });
+                    });
                 }
             } else {
                 NSLog(@"No data");
@@ -153,8 +154,8 @@ bool serverAvailable;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
-//    _hostName = @"datapad.herokuapp.com";
-    _hostName = @"10.1.10.189:3000";
+    _hostName = @"datapad.herokuapp.com";
+//    _hostName = @"10.1.10.189:3000";
     hostReach = [Reachability reachabilityWithHostName:_hostName];
     [hostReach startNotifier];
         [self updateReachabilityStatus:hostReach];
