@@ -31,29 +31,37 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     NSLog(@"Search Pressed");
     [_appDelegate getDataForSearch:_resultsSearchBar.text];
+    // resign first responder and hide the keyboard
+    [self.view endEditing:true];
 }
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
     if(item.tag == 0)
     {
         NSLog(@"Jedi tab selected");
+        // clear any existing text and reset the placeholder text
+        _resultsSearchBar.text = [NSString stringWithFormat:@""];
         _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for Jedi"];
 //        [_appDelegate getDataForSearch:[NSString stringWithFormat:@"%@ %@",_resultsSearchBar.text,_resultsSearchBar.text]];
     }
     if (item.tag == 1) {
         NSLog(@"Sith tab selected");
+        _resultsSearchBar.text = [NSString stringWithFormat:@""];
         _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for Sith"];
     }
     if (item.tag == 2) {
         NSLog(@"Rebels tab selected");
+        _resultsSearchBar.text = [NSString stringWithFormat:@""];
         _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for Rebels"];
     }
     if (item.tag == 3) {
         NSLog(@"Empire tab selected");
+        _resultsSearchBar.text = [NSString stringWithFormat:@""];
         _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for Imperials"];
     }
     if (item.tag == 4) {
         NSLog(@"Droids tab selected");
+        _resultsSearchBar.text = [NSString stringWithFormat:@""];
         _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for Droids"];
     }
 }

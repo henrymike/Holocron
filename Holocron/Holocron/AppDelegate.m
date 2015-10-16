@@ -52,6 +52,7 @@ bool serverAvailable;
     }] resume];
 }
 
+
 - (void)getImageFromServer:(NSString *)localFileName fromURL:(NSString *)fullFileName atIndexPath:(NSIndexPath *)indexPath {
     if (serverAvailable) {
         NSURL *fileURL = [NSURL URLWithString:fullFileName];

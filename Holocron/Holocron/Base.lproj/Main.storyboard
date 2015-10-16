@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iyD-Ra-fb4">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search all Star Wars characters" id="A3N-tn-JhY">
                                     <rect key="frame" x="0.0" y="64" width="600" height="44"/>
@@ -77,6 +77,7 @@
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="r0I-Dr-cMg" secondAttribute="bottom" id="8dk-bN-hsu"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iyD-Ra-fb4" secondAttribute="bottom" id="bGE-Ce-Rdn"/>
+                            <constraint firstItem="iyD-Ra-fb4" firstAttribute="bottom" secondItem="r0I-Dr-cMg" secondAttribute="bottom" constant="-49" id="fTr-jl-5Gc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="r0I-Dr-cMg" secondAttribute="trailing" constant="-20" id="iRt-US-gmt"/>
                             <constraint firstItem="iyD-Ra-fb4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="jYi-TJ-QZf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iyD-Ra-fb4" secondAttribute="trailing" constant="-20" id="pd6-V2-fCQ"/>
@@ -87,6 +88,7 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="bGE-Ce-Rdn"/>
                                 <exclude reference="rrw-7t-QDP"/>
                                 <exclude reference="uA4-Y4-Gt7"/>
                             </mask>
