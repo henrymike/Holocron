@@ -27,7 +27,8 @@ bool serverAvailable;
 - (void)getDataForSearch:(NSString *)searchString {
     NSLog(@"Get data");
 //    NSURL *fileURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://%@/search?term=%@",_hostName,searchString]];
-    NSURL *fileURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/api/characters",_hostName]];
+    NSURL *fileURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/api/characters?%@q=%@",_hostName,_characterType,searchString]];
+    NSLog(@"Search: %@",fileURL);
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:fileURL];
     [request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
@@ -63,7 +64,7 @@ bool serverAvailable;
         NSURLSession *session = [NSURLSession sharedSession];
         NSLog(@"PreSession");
         [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-            NSLog(@"Length:%li error:%@",[data length],error);
+            NSLog(@"Length:%lu error:%@",[data length],error);
             if (([data length]> 0) && (error == nil)) {
                 NSLog(@"Got Data");
                 NSString *savedFilePath = [[self getDocumentsDirectory] stringByAppendingPathComponent:localFileName];

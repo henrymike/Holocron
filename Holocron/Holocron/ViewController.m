@@ -41,28 +41,33 @@
     {
         NSLog(@"Jedi tab selected");
         // clear any existing text and reset the placeholder text
-        _resultsSearchBar.text = [NSString stringWithFormat:@""];
+//        _resultsSearchBar.text = [NSString stringWithFormat:@""];
+        _appDelegate.characterType = @"t=jedi&";
         _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for Jedi"];
 //        [_appDelegate getDataForSearch:[NSString stringWithFormat:@"%@ %@",_resultsSearchBar.text,_resultsSearchBar.text]];
     }
     if (item.tag == 1) {
         NSLog(@"Sith tab selected");
-        _resultsSearchBar.text = [NSString stringWithFormat:@""];
+//        _resultsSearchBar.text = [NSString stringWithFormat:@""];
+        _appDelegate.characterType = @"t=sith&";
         _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for Sith"];
     }
     if (item.tag == 2) {
         NSLog(@"Rebels tab selected");
-        _resultsSearchBar.text = [NSString stringWithFormat:@""];
+//        _resultsSearchBar.text = [NSString stringWithFormat:@""];
+        _appDelegate.characterType = @"t=rebels&";
         _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for Rebels"];
     }
     if (item.tag == 3) {
         NSLog(@"Empire tab selected");
-        _resultsSearchBar.text = [NSString stringWithFormat:@""];
+//        _resultsSearchBar.text = [NSString stringWithFormat:@""];
+        _appDelegate.characterType = @"t=empire&";
         _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for Imperials"];
     }
     if (item.tag == 4) {
         NSLog(@"Droids tab selected");
-        _resultsSearchBar.text = [NSString stringWithFormat:@""];
+//        _resultsSearchBar.text = [NSString stringWithFormat:@""];
+        _appDelegate.characterType = @"t=droids&";
         _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for Droids"];
     }
 }
@@ -128,6 +133,8 @@
     _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotCharacterReceived) name:@"gotCharactersNotification" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotImageReceived) name:@"gotImagesNotification" object:nil];
+    
+    _appDelegate.characterType = @"";
     
 }
 

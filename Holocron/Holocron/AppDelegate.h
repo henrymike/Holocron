@@ -19,6 +19,7 @@
 @property (readonly, strong, nonatomic)            NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (nonatomic, strong)                      NSString                     *hostName;
 @property (nonatomic, strong)                      NSArray                      *characterArray;
+@property (nonatomic, strong)                      NSString                     *characterType;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
