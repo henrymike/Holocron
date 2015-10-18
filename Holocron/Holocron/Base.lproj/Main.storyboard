@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iyD-Ra-fb4">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <rect key="frame" x="0.0" y="44" width="600" height="507"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="charCell" textLabel="ZxT-2w-6JT" rowHeight="44" style="IBUITableViewCellStyleDefault" id="mMG-L0-2Bo">
@@ -83,8 +83,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="A3N-tn-JhY" secondAttribute="trailing" constant="-20" id="H2g-qF-TKP"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iyD-Ra-fb4" secondAttribute="bottom" id="bGE-Ce-Rdn"/>
                             <constraint firstItem="iyD-Ra-fb4" firstAttribute="bottom" secondItem="r0I-Dr-cMg" secondAttribute="bottom" constant="-49" id="fTr-jl-5Gc"/>
+                            <constraint firstItem="iyD-Ra-fb4" firstAttribute="top" secondItem="A3N-tn-JhY" secondAttribute="bottom" constant="-64" id="fcL-X6-M4R"/>
                             <constraint firstAttribute="trailingMargin" secondItem="r0I-Dr-cMg" secondAttribute="trailing" constant="-20" id="iRt-US-gmt"/>
-                            <constraint firstItem="iyD-Ra-fb4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="jYi-TJ-QZf"/>
+                            <constraint firstItem="iyD-Ra-fb4" firstAttribute="leading" secondItem="A3N-tn-JhY" secondAttribute="trailing" constant="-600" id="jQv-VF-gdD"/>
+                            <constraint firstItem="iyD-Ra-fb4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="jYi-TJ-QZf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iyD-Ra-fb4" secondAttribute="trailing" constant="-20" id="pd6-V2-fCQ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iyD-Ra-fb4" secondAttribute="bottom" constant="-9" id="rrw-7t-QDP"/>
                             <constraint firstItem="r0I-Dr-cMg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="s8P-pn-xBz"/>
@@ -93,6 +95,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="jQv-VF-gdD"/>
+                                <exclude reference="jYi-TJ-QZf"/>
                                 <exclude reference="bGE-Ce-Rdn"/>
                                 <exclude reference="rrw-7t-QDP"/>
                                 <exclude reference="uA4-Y4-Gt7"/>
