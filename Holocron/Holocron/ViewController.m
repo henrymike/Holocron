@@ -20,7 +20,6 @@
 @property (nonatomic, weak)   IBOutlet     UITabBarItem   *sithTabBarItem;
 @property (nonatomic, weak)   IBOutlet     UITabBarItem   *rebelsTabBarItem;
 @property (nonatomic, weak)   IBOutlet     UITabBarItem   *empireTabBarItem;
-@property (nonatomic, weak)   IBOutlet     UITabBarItem   *droidsTabBarItem;
 
 
 @end
@@ -58,12 +57,6 @@
         NSLog(@"Empire tab selected");
         _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for Imperials"];
         _appDelegate.characterType = @"type=imperials&";
-        [_appDelegate getDataForSearch:_resultsSearchBar.text];
-    }
-    if (item.tag == 4) {
-        NSLog(@"Droids tab selected");
-        _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for Droids"];
-        _appDelegate.characterType = @"type=droids&";
         [_appDelegate getDataForSearch:_resultsSearchBar.text];
     }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mq5-i8-2r4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mq5-i8-2r4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -63,7 +63,6 @@
                                     <tabBarItem tag="1" title="Sith" image="icon_sith" id="VuD-9I-DYE"/>
                                     <tabBarItem tag="2" title="Rebels" image="icon_rebels" id="xHs-Tq-jc5"/>
                                     <tabBarItem tag="3" title="Empire" image="icon_empire" id="ssA-Kx-OtM"/>
-                                    <tabBarItem tag="4" title="Droids" image="icon_droids" id="xUA-Jn-tih"/>
                                 </items>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="h1d-Db-mVO"/>
@@ -120,7 +119,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="characterTableView" destination="iyD-Ra-fb4" id="abv-db-T8w"/>
-                        <outlet property="droidsTabBarItem" destination="xUA-Jn-tih" id="dtP-g5-YMg"/>
                         <outlet property="empireTabBarItem" destination="ssA-Kx-OtM" id="Mi4-0u-pDI"/>
                         <outlet property="jediTabBarItem" destination="CU9-PM-gIf" id="SMI-sJ-BvI"/>
                         <outlet property="rebelsTabBarItem" destination="xHs-Tq-jc5" id="s7i-vY-GXL"/>
@@ -407,7 +405,6 @@
     <resources>
         <image name="chewey" width="167" height="346"/>
         <image name="icon_chewbacca" width="30" height="30"/>
-        <image name="icon_droids" width="25" height="25"/>
         <image name="icon_empire" width="25" height="25"/>
         <image name="icon_jedi" width="25" height="25"/>
         <image name="icon_rebels" width="25" height="25"/>
