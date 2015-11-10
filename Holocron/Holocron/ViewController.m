@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "DetailViewController.h"
+#import "ResultsTableViewCell.h"
 #import "EasterEggViewController.h"
 
 @interface ViewController ()
@@ -70,9 +71,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 //    NSLog(@"CFRAIP");
-    UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"charCell"];
+    ResultsTableViewCell *cell = (ResultsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"charCell"];
     NSDictionary *selectedResult = _appDelegate.characterArray[indexPath.row];
-    cell.textLabel.text = [selectedResult objectForKey:@"name"];
+    cell.characterNameLabel.text = [selectedResult objectForKey:@"name"];
     
     // fetch and load images
     if ([selectedResult objectForKey:@"image"] != [NSNull null]) {
@@ -83,8 +84,7 @@
         
         if ([_appDelegate fileIsLocal:fileNameFull]) {
 //            NSLog(@"Local %@",fileNameFull);
-            cell.imageView.image = [UIImage imageNamed:[[_appDelegate getDocumentsDirectory] stringByAppendingPathComponent:fileNameFull]];
-            cell.imageView.contentMode = UIViewContentModeScaleAspectFill;
+            cell.characterImageView.image = [UIImage imageNamed:[[_appDelegate getDocumentsDirectory] stringByAppendingPathComponent:fileNameFull]];
         } else {
 //            NSLog(@"Not Local %@ %@",[selectedResult objectForKey:@"name"],fileNameURL);
             [_appDelegate getImageFromServer:fileNameFull fromURL:fileNameURL atIndexPath:indexPath];

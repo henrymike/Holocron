@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55120C901BF28D5300A1FE02 /* ResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55120C8F1BF28D5300A1FE02 /* ResultsTableViewCell.m */; };
 		55EF294E1BCEF4190020C26F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EF294D1BCEF4190020C26F /* main.m */; };
 		55EF29511BCEF4190020C26F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EF29501BCEF4190020C26F /* AppDelegate.m */; };
 		55EF29541BCEF4190020C26F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EF29531BCEF4190020C26F /* ViewController.m */; };
@@ -15,22 +16,24 @@
 		55EF295C1BCEF4190020C26F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55EF295B1BCEF4190020C26F /* Assets.xcassets */; };
 		55EF295F1BCEF4190020C26F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55EF295D1BCEF4190020C26F /* LaunchScreen.storyboard */; };
 		55EF29671BCEF4250020C26F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55EF29661BCEF4250020C26F /* AVFoundation.framework */; };
-		55EF296B1BCEF68D0020C26F /* EasterEggViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EF296A1BCEF68D0020C26F /* EasterEggViewController.m */; settings = {ASSET_TAGS = (); }; };
-		55EF29AA1BCF3B240020C26F /* ChewbaccaSound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A21BCF3B240020C26F /* ChewbaccaSound1.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF29AB1BCF3B240020C26F /* ChewbaccaSound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A31BCF3B240020C26F /* ChewbaccaSound2.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF29AC1BCF3B240020C26F /* ChewbaccaSound3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A41BCF3B240020C26F /* ChewbaccaSound3.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF29AD1BCF3B240020C26F /* ChewbaccaSound4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A51BCF3B240020C26F /* ChewbaccaSound4.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF29AE1BCF3B240020C26F /* ChewbaccaSound5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A61BCF3B240020C26F /* ChewbaccaSound5.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF29AF1BCF3B240020C26F /* ChewbaccaSound6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A71BCF3B240020C26F /* ChewbaccaSound6.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF29B01BCF3B240020C26F /* ChewbaccaSound7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A81BCF3B240020C26F /* ChewbaccaSound7.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF29B11BCF3B240020C26F /* ChewbaccaSound8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A91BCF3B240020C26F /* ChewbaccaSound8.mp3 */; settings = {ASSET_TAGS = (); }; };
-		55EF29BD1BD01C3B0020C26F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EF29BC1BD01C3B0020C26F /* Reachability.m */; settings = {ASSET_TAGS = (); }; };
+		55EF296B1BCEF68D0020C26F /* EasterEggViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EF296A1BCEF68D0020C26F /* EasterEggViewController.m */; };
+		55EF29AA1BCF3B240020C26F /* ChewbaccaSound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A21BCF3B240020C26F /* ChewbaccaSound1.mp3 */; };
+		55EF29AB1BCF3B240020C26F /* ChewbaccaSound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A31BCF3B240020C26F /* ChewbaccaSound2.mp3 */; };
+		55EF29AC1BCF3B240020C26F /* ChewbaccaSound3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A41BCF3B240020C26F /* ChewbaccaSound3.mp3 */; };
+		55EF29AD1BCF3B240020C26F /* ChewbaccaSound4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A51BCF3B240020C26F /* ChewbaccaSound4.mp3 */; };
+		55EF29AE1BCF3B240020C26F /* ChewbaccaSound5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A61BCF3B240020C26F /* ChewbaccaSound5.mp3 */; };
+		55EF29AF1BCF3B240020C26F /* ChewbaccaSound6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A71BCF3B240020C26F /* ChewbaccaSound6.mp3 */; };
+		55EF29B01BCF3B240020C26F /* ChewbaccaSound7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A81BCF3B240020C26F /* ChewbaccaSound7.mp3 */; };
+		55EF29B11BCF3B240020C26F /* ChewbaccaSound8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 55EF29A91BCF3B240020C26F /* ChewbaccaSound8.mp3 */; };
+		55EF29BD1BD01C3B0020C26F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EF29BC1BD01C3B0020C26F /* Reachability.m */; };
 		55EF29BF1BD01D080020C26F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55EF29BE1BD01D080020C26F /* SystemConfiguration.framework */; };
 		55EF29C11BD01D1F0020C26F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55EF29C01BD01D1F0020C26F /* Social.framework */; };
-		55EF29C41BD04C490020C26F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EF29C31BD04C490020C26F /* DetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		55EF29C41BD04C490020C26F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EF29C31BD04C490020C26F /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55120C8E1BF28D5300A1FE02 /* ResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsTableViewCell.h; sourceTree = "<group>"; };
+		55120C8F1BF28D5300A1FE02 /* ResultsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsTableViewCell.m; sourceTree = "<group>"; };
 		55EF29491BCEF4190020C26F /* Holocron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Holocron.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55EF294D1BCEF4190020C26F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		55EF294F1BCEF4190020C26F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -108,6 +111,8 @@
 				55EF29C31BD04C490020C26F /* DetailViewController.m */,
 				55EF29691BCEF68D0020C26F /* EasterEggViewController.h */,
 				55EF296A1BCEF68D0020C26F /* EasterEggViewController.m */,
+				55120C8E1BF28D5300A1FE02 /* ResultsTableViewCell.h */,
+				55120C8F1BF28D5300A1FE02 /* ResultsTableViewCell.m */,
 				55EF29551BCEF4190020C26F /* Main.storyboard */,
 				55EF295B1BCEF4190020C26F /* Assets.xcassets */,
 				55EF295D1BCEF4190020C26F /* LaunchScreen.storyboard */,
@@ -233,6 +238,7 @@
 				55EF296B1BCEF68D0020C26F /* EasterEggViewController.m in Sources */,
 				55EF29BD1BD01C3B0020C26F /* Reachability.m in Sources */,
 				55EF294E1BCEF4190020C26F /* main.m in Sources */,
+				55120C901BF28D5300A1FE02 /* ResultsTableViewCell.m in Sources */,
 				55EF29C41BD04C490020C26F /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +386,7 @@
 				55EF29651BCEF4190020C26F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

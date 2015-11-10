@@ -27,19 +27,6 @@
 
 #pragma mark Interactivity Methods
 
-//-(void)playerItemDidReachEnd:(NSNotification *)notification {
-//    NSLog(@"Item Ended");
-//    AVPlayerItem *item = [notification object];
-//    if (item == _audioPlayer1.currentItem) {
-//        [_audioPlayer1.currentItem seekToTime:kCMTimeZero];
-//        [_audioPlayer1 pause];
-//    }
-//}
-//
-//- (IBAction)audio1PlayButtonPressed:(id)sender {
-//        [_audioPlayer1 play];
-//}
-
 - (IBAction)button1Pressed:(id)sender {
     NSURL *audio1 = [[NSBundle mainBundle] URLForResource:@"ChewbaccaSound1" withExtension:@"mp3"];
     _audioPlayer1 = [AVPlayer playerWithURL:audio1];
@@ -93,11 +80,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // need to loop through an array and input the url for the audio files
-//    NSURL *cheweyURL = [[NSBundle mainBundle] URLForResource:@"ChewbaccaSound1" withExtension:@"mp3"];
-//    _audioPlayer1 = [AVPlayer playerWithURL:cheweyURL];
-//    _audioPlayer1.actionAtItemEnd = AVPlayerActionAtItemEndNone;
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerItemDidReachEnd:) name:AVPlayerItemDidPlayToEndTimeNotification object:[_audioPlayer1 currentItem]];
 }
 
 - (void)didReceiveMemoryWarning {
