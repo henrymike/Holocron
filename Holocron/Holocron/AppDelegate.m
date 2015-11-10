@@ -26,7 +26,7 @@ bool serverAvailable;
 
 - (void)getDataForSearch:(NSString *)searchString {
     NSLog(@"Get data");
-//    NSURL *fileURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://%@/search?term=%@",_hostName,searchString]];
+    NSLog(@"AD Character Type: %@",_characterType);
     NSURL *fileURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/api/characters?%@q=%@",_hostName,_characterType,searchString]];
     NSLog(@"Search: %@",fileURL);
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
@@ -37,13 +37,14 @@ bool serverAvailable;
     [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (([data length] > 0) && (error == nil)) {
             NSJSONSerialization *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-//            NSLog(@"Got data %@",json);
+            NSLog(@"Got data");
             _characterArray = [(NSDictionary *) json objectForKey:@"characters"];
+//            _affiliationArray = [(NSDictionary *) json objectForKey:@"affiliations"];
 //            for (NSDictionary *resultsDict in _characterArray) {
 //                NSLog(@"Character Name:%@",[resultsDict objectForKey:@"name"]);
 //            }
             dispatch_async(dispatch_get_main_queue(), ^{
-                NSLog(@"Async");
+                NSLog(@"Send Character Notification");
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"gotCharactersNotification" object:nil];
             });
         }
@@ -62,9 +63,9 @@ bool serverAvailable;
         [request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
         [request setTimeoutInterval:30.0];
         NSURLSession *session = [NSURLSession sharedSession];
-        NSLog(@"PreSession");
+//        NSLog(@"PreSession");
         [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-            NSLog(@"Length:%lu error:%@",[data length],error);
+//            NSLog(@"Length:%lu error:%@",[data length],error);
             if (([data length]> 0) && (error == nil)) {
                 NSLog(@"Got Data");
                 NSString *savedFilePath = [[self getDocumentsDirectory] stringByAppendingPathComponent:localFileName];
@@ -91,7 +92,7 @@ bool serverAvailable;
 - (NSString *)getDocumentsDirectory {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true);
     NSString *documentDirectory = paths[0];
-    NSLog(@"DocPath:%@",paths[0]);
+//    NSLog(@"DocPath:%@",paths[0]);
     return documentDirectory;
 }
 
@@ -109,15 +110,15 @@ bool serverAvailable;
     if (currReach == hostReach) {
         switch (netStatus) {
             case NotReachable:
-                NSLog(@"Server not reachable");
+//                NSLog(@"Server not reachable");
                 serverAvailable = false;
                 break;
             case ReachableViaWiFi:
-                NSLog(@"Server reachable via Wifi");
+//                NSLog(@"Server reachable via Wifi");
                 serverAvailable = true;
                 break;
             case ReachableViaWWAN:
-                NSLog(@"Server reachable via WAN");
+//                NSLog(@"Server reachable via WAN");
                 serverAvailable = true;
                 break;
             default:
@@ -127,15 +128,15 @@ bool serverAvailable;
     if (currReach == internetReach) {
         switch (netStatus) {
             case NotReachable:
-                NSLog(@"Internet not reachable");
+//                NSLog(@"Internet not reachable");
                 internetAvailable = false;
                 break;
             case ReachableViaWiFi:
-                NSLog(@"Internet reachable via Wifi");
+//                NSLog(@"Internet reachable via Wifi");
                 internetAvailable = true;
                 break;
             case ReachableViaWWAN:
-                NSLog(@"Internet reachable via WAN");
+//                NSLog(@"Internet reachable via WAN");
                 internetAvailable = true;
                 break;
             default:
@@ -156,7 +157,6 @@ bool serverAvailable;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
     _hostName = @"datapad.herokuapp.com";
-//    _hostName = @"10.1.10.189:3000";
     hostReach = [Reachability reachabilityWithHostName:_hostName];
     [hostReach startNotifier];
         [self updateReachabilityStatus:hostReach];
@@ -165,32 +165,11 @@ bool serverAvailable;
     [internetReach startNotifier];
     [self updateReachabilityStatus:internetReach];
     _characterArray = [[NSArray alloc] init];
+    _characterType = @"";
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    // Saves changes in the application's managed object context before the application terminates.
-    [self saveContext];
-}
 
 #pragma mark - Core Data stack
 
@@ -199,12 +178,10 @@ bool serverAvailable;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (NSURL *)applicationDocumentsDirectory {
-    // The directory the application uses to store the Core Data store file. This code uses a directory named "henrymike.Holocron" in the application's documents directory.
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
 - (NSManagedObjectModel *)managedObjectModel {
-    // The managed object model for the application. It is a fatal error for the application not to be able to find and load its model.
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
@@ -214,13 +191,11 @@ bool serverAvailable;
 }
 
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
-    // The persistent store coordinator for the application. This implementation creates and returns a coordinator, having added the store for the application to it.
     if (_persistentStoreCoordinator != nil) {
         return _persistentStoreCoordinator;
     }
     
     // Create the coordinator and store
-    
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Holocron.sqlite"];
     NSError *error = nil;
@@ -233,8 +208,6 @@ bool serverAvailable;
         dict[NSLocalizedFailureReasonErrorKey] = failureReason;
         dict[NSUnderlyingErrorKey] = error;
         error = [NSError errorWithDomain:@"YOUR_ERROR_DOMAIN" code:9999 userInfo:dict];
-        // Replace this with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
@@ -244,7 +217,6 @@ bool serverAvailable;
 
 
 - (NSManagedObjectContext *)managedObjectContext {
-    // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.)
     if (_managedObjectContext != nil) {
         return _managedObjectContext;
     }
@@ -265,8 +237,6 @@ bool serverAvailable;
     if (managedObjectContext != nil) {
         NSError *error = nil;
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }

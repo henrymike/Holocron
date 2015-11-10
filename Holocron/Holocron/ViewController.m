@@ -30,9 +30,7 @@
 #pragma mark - Interactivity Methods
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    NSLog(@"Search Pressed");
     [_appDelegate getDataForSearch:_resultsSearchBar.text];
-    // resign first responder and hide the keyboard
     [self.view endEditing:true];
 }
 
@@ -40,47 +38,45 @@
     if(item.tag == 0)
     {
         NSLog(@"Jedi tab selected");
-        // clear any existing text and reset the placeholder text
-//        _resultsSearchBar.text = [NSString stringWithFormat:@""];
-        _appDelegate.characterType = @"t=jedi&";
         _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for Jedi"];
-//        [_appDelegate getDataForSearch:[NSString stringWithFormat:@"%@ %@",_resultsSearchBar.text,_resultsSearchBar.text]];
+        _appDelegate.characterType = @"type=jedi&";
+        [_appDelegate getDataForSearch:_resultsSearchBar.text];
     }
     if (item.tag == 1) {
         NSLog(@"Sith tab selected");
-//        _resultsSearchBar.text = [NSString stringWithFormat:@""];
-        _appDelegate.characterType = @"t=sith&";
-        _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for Sith"];
+//            _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for Sith"];
+            _appDelegate.characterType = @"type=sith&";
+            [_appDelegate getDataForSearch:_resultsSearchBar.text];
     }
     if (item.tag == 2) {
         NSLog(@"Rebels tab selected");
-//        _resultsSearchBar.text = [NSString stringWithFormat:@""];
-        _appDelegate.characterType = @"t=rebels&";
         _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for Rebels"];
+        _appDelegate.characterType = @"type=rebels&";
+        [_appDelegate getDataForSearch:_resultsSearchBar.text];
     }
     if (item.tag == 3) {
         NSLog(@"Empire tab selected");
-//        _resultsSearchBar.text = [NSString stringWithFormat:@""];
-        _appDelegate.characterType = @"t=empire&";
         _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for Imperials"];
+        _appDelegate.characterType = @"type=imperials&";
+        [_appDelegate getDataForSearch:_resultsSearchBar.text];
     }
     if (item.tag == 4) {
         NSLog(@"Droids tab selected");
-//        _resultsSearchBar.text = [NSString stringWithFormat:@""];
-        _appDelegate.characterType = @"t=droids&";
         _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for Droids"];
+        _appDelegate.characterType = @"type=droids&";
+        [_appDelegate getDataForSearch:_resultsSearchBar.text];
     }
 }
 
 #pragma mark - Table View Methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"NRIS");
+//    NSLog(@"NRIS");
     return _appDelegate.characterArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"CFRAIP");
+//    NSLog(@"CFRAIP");
     UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"charCell"];
     NSDictionary *selectedResult = _appDelegate.characterArray[indexPath.row];
     cell.textLabel.text = [selectedResult objectForKey:@"name"];
@@ -89,14 +85,15 @@
     if ([selectedResult objectForKey:@"image"] != [NSNull null]) {
         NSString *fileNameURL = [selectedResult objectForKey:@"image"];
         NSString *fileNameFull = [fileNameURL stringByReplacingOccurrencesOfString:@"/" withString:@""];
-        NSLog(@"Files %@ & %@",fileNameFull,fileNameURL);
+//        NSLog(@"Files %@ & %@",fileNameFull,fileNameURL);
         fileNameFull = [fileNameFull stringByReplacingOccurrencesOfString:@":" withString:@""];
         
         if ([_appDelegate fileIsLocal:fileNameFull]) {
-            NSLog(@"Local %@",fileNameFull);
+//            NSLog(@"Local %@",fileNameFull);
             cell.imageView.image = [UIImage imageNamed:[[_appDelegate getDocumentsDirectory] stringByAppendingPathComponent:fileNameFull]];
+            cell.imageView.contentMode = UIViewContentModeScaleAspectFill;
         } else {
-            NSLog(@"Not Local %@ %@",[selectedResult objectForKey:@"name"],fileNameURL);
+//            NSLog(@"Not Local %@ %@",[selectedResult objectForKey:@"name"],fileNameURL);
             [_appDelegate getImageFromServer:fileNameFull fromURL:fileNameURL atIndexPath:indexPath];
         }
     }
@@ -105,7 +102,7 @@
 }
 
 - (void)gotCharacterReceived {
-    NSLog(@"GCR");
+    NSLog(@"Received Character Notification");
     [_characterTableView reloadData];
 }
 
