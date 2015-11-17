@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		55120C901BF28D5300A1FE02 /* ResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55120C8F1BF28D5300A1FE02 /* ResultsTableViewCell.m */; };
+		556E9F1A1BF2FE230097EEAF /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 556E9F191BF2FE230097EEAF /* Images */; };
 		55EF294E1BCEF4190020C26F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EF294D1BCEF4190020C26F /* main.m */; };
 		55EF29511BCEF4190020C26F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EF29501BCEF4190020C26F /* AppDelegate.m */; };
 		55EF29541BCEF4190020C26F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EF29531BCEF4190020C26F /* ViewController.m */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		55120C8E1BF28D5300A1FE02 /* ResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsTableViewCell.h; sourceTree = "<group>"; };
 		55120C8F1BF28D5300A1FE02 /* ResultsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsTableViewCell.m; sourceTree = "<group>"; };
+		556E9F191BF2FE230097EEAF /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = SOURCE_ROOT; };
 		55EF29491BCEF4190020C26F /* Holocron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Holocron.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55EF294D1BCEF4190020C26F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		55EF294F1BCEF4190020C26F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				55120C8E1BF28D5300A1FE02 /* ResultsTableViewCell.h */,
 				55120C8F1BF28D5300A1FE02 /* ResultsTableViewCell.m */,
 				55EF29551BCEF4190020C26F /* Main.storyboard */,
+				556E9F191BF2FE230097EEAF /* Images */,
 				55EF295B1BCEF4190020C26F /* Assets.xcassets */,
 				55EF295D1BCEF4190020C26F /* LaunchScreen.storyboard */,
 				55EF29601BCEF4190020C26F /* Info.plist */,
@@ -215,6 +218,7 @@
 				55EF29AC1BCF3B240020C26F /* ChewbaccaSound3.mp3 in Resources */,
 				55EF29AA1BCF3B240020C26F /* ChewbaccaSound1.mp3 in Resources */,
 				55EF29AF1BCF3B240020C26F /* ChewbaccaSound6.mp3 in Resources */,
+				556E9F1A1BF2FE230097EEAF /* Images in Resources */,
 				55EF29AD1BCF3B240020C26F /* ChewbaccaSound4.mp3 in Resources */,
 				55EF29AB1BCF3B240020C26F /* ChewbaccaSound2.mp3 in Resources */,
 				55EF29B01BCF3B240020C26F /* ChewbaccaSound7.mp3 in Resources */,

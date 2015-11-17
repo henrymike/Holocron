@@ -21,6 +21,8 @@
 @property (nonatomic, weak)   IBOutlet     UITabBarItem   *sithTabBarItem;
 @property (nonatomic, weak)   IBOutlet     UITabBarItem   *rebelsTabBarItem;
 @property (nonatomic, weak)   IBOutlet     UITabBarItem   *empireTabBarItem;
+@property (nonatomic, weak)   IBOutlet     UIView         *loadingContainerView;
+@property (nonatomic, weak)   IBOutlet     UIImageView    *loadingImageView;
 
 
 @end
@@ -101,8 +103,7 @@
 
 - (void)gotImageReceived {
     NSLog(@"Got Image");
-//    [_characterTableView reloadRowsAtIndexPaths:@[] withRowAnimation:[UITableViewRowAnimationAutomatic];
-//  [_characterTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [_characterTableView reloadData];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -115,6 +116,26 @@
     }
 }
 
+
+#pragma mark - Animation Methods
+
+- (IBAction)animatedLoading {
+    NSMutableArray *loadingArray = [[NSMutableArray alloc] init];
+    for (int i = 1; i <= 4; i++) {
+        [loadingArray addObject:[UIImage imageNamed:[NSString stringWithFormat:@"Images/loading%i",i]]];
+    }
+    _loadingImageView.alpha = 0.9;
+    _loadingImageView.animationImages = loadingArray;
+    _loadingImageView.animationDuration = 1.5;
+    _loadingImageView.animationRepeatCount = 12;
+    [_loadingImageView startAnimating];
+    [self performSelector:@selector(animationDidFinish) withObject:nil
+               afterDelay:_loadingImageView.animationDuration];
+}
+
+- (void)animationDidFinish {
+//    _loadingContainerView.hidden = true;
+}
 
 #pragma mark - Life Cycle Methods
 

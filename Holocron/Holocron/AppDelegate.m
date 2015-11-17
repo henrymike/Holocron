@@ -74,7 +74,6 @@ bool serverAvailable;
                     [data writeToFile:savedFilePath atomically:true];
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [[NSNotificationCenter defaultCenter] postNotificationName:@"gotImagesNotification" object:nil];
-//                        [_characterTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
                     });
                 }
             } else {

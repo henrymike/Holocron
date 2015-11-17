@@ -84,15 +84,41 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="0sB-J4-uh7"/>
                                 </connections>
                             </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H05-fx-0AI">
+                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xjb-GY-7w8">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <animations/>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Tyt-2S-GcS"/>
+                                    <constraint firstAttribute="height" constant="128" id="qDc-70-cUS"/>
+                                    <constraint firstAttribute="width" constant="240" id="ynQ-oa-MJp"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="qDc-70-cUS"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="A3N-tn-JhY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="1y5-XI-SBQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H05-fx-0AI" secondAttribute="trailing" constant="160" id="47G-tw-t8f"/>
                             <constraint firstItem="A3N-tn-JhY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6xX-gV-S5j"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="r0I-Dr-cMg" secondAttribute="bottom" id="8dk-bN-hsu"/>
+                            <constraint firstItem="H05-fx-0AI" firstAttribute="top" secondItem="A3N-tn-JhY" secondAttribute="bottom" constant="128" id="AoU-6d-eza"/>
                             <constraint firstAttribute="trailingMargin" secondItem="A3N-tn-JhY" secondAttribute="trailing" constant="-20" id="H2g-qF-TKP"/>
+                            <constraint firstItem="H05-fx-0AI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H8w-BH-NdX"/>
+                            <constraint firstItem="H05-fx-0AI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="172" id="MwU-FB-IX0"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iyD-Ra-fb4" secondAttribute="bottom" id="bGE-Ce-Rdn"/>
+                            <constraint firstItem="H05-fx-0AI" firstAttribute="top" secondItem="iyD-Ra-fb4" secondAttribute="bottom" constant="-315" id="ehv-as-48K"/>
                             <constraint firstItem="iyD-Ra-fb4" firstAttribute="bottom" secondItem="r0I-Dr-cMg" secondAttribute="bottom" constant="-49" id="fTr-jl-5Gc"/>
                             <constraint firstItem="iyD-Ra-fb4" firstAttribute="top" secondItem="A3N-tn-JhY" secondAttribute="bottom" constant="-64" id="fcL-X6-M4R"/>
                             <constraint firstAttribute="trailingMargin" secondItem="r0I-Dr-cMg" secondAttribute="trailing" constant="-20" id="iRt-US-gmt"/>
@@ -103,11 +129,16 @@
                             <constraint firstItem="r0I-Dr-cMg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="s8P-pn-xBz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iyD-Ra-fb4" secondAttribute="bottom" id="uA4-Y4-Gt7"/>
                             <constraint firstItem="iyD-Ra-fb4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ysr-Vo-b6v"/>
+                            <constraint firstItem="H05-fx-0AI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="160" id="zA1-E4-dzE"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="jQv-VF-gdD"/>
                                 <exclude reference="jYi-TJ-QZf"/>
+                                <exclude reference="47G-tw-t8f"/>
+                                <exclude reference="MwU-FB-IX0"/>
+                                <exclude reference="ehv-as-48K"/>
+                                <exclude reference="zA1-E4-dzE"/>
                                 <exclude reference="bGE-Ce-Rdn"/>
                                 <exclude reference="rrw-7t-QDP"/>
                                 <exclude reference="uA4-Y4-Gt7"/>
@@ -121,11 +152,18 @@
                                 <segue destination="1jx-8D-bpq" kind="show" identifier="segueChewey" id="Ebn-KN-SSi"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Animation" id="ciJ-bU-DBV">
+                            <connections>
+                                <action selector="animatedLoading" destination="BYZ-38-t0r" id="fIh-8y-TVI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="characterTableView" destination="iyD-Ra-fb4" id="abv-db-T8w"/>
                         <outlet property="empireTabBarItem" destination="ssA-Kx-OtM" id="Mi4-0u-pDI"/>
                         <outlet property="jediTabBarItem" destination="CU9-PM-gIf" id="SMI-sJ-BvI"/>
+                        <outlet property="loadingContainerView" destination="H05-fx-0AI" id="Wqz-Lf-hPs"/>
+                        <outlet property="loadingImageView" destination="Xjb-GY-7w8" id="OIk-Nu-Y7d"/>
                         <outlet property="rebelsTabBarItem" destination="xHs-Tq-jc5" id="s7i-vY-GXL"/>
                         <outlet property="resultsSearchBar" destination="A3N-tn-JhY" id="wSB-hg-vQw"/>
                         <outlet property="sithTabBarItem" destination="VuD-9I-DYE" id="pcf-nO-9op"/>
