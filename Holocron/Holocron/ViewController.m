@@ -119,7 +119,8 @@
 
 #pragma mark - Animation Methods
 
-- (IBAction)animatedLoading {
+- (void)animatedLoading {
+    _loadingContainerView.hidden = false;
     NSMutableArray *loadingArray = [[NSMutableArray alloc] init];
     for (int i = 1; i <= 4; i++) {
         [loadingArray addObject:[UIImage imageNamed:[NSString stringWithFormat:@"Images/loading%i",i]]];
@@ -129,12 +130,10 @@
     _loadingImageView.animationDuration = 1.5;
     _loadingImageView.animationRepeatCount = 12;
     [_loadingImageView startAnimating];
-    [self performSelector:@selector(animationDidFinish) withObject:nil
-               afterDelay:_loadingImageView.animationDuration];
 }
 
 - (void)animationDidFinish {
-//    _loadingContainerView.hidden = true;
+    _loadingContainerView.hidden = true;
 }
 
 #pragma mark - Life Cycle Methods
@@ -144,9 +143,10 @@
     _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotCharacterReceived) name:@"gotCharactersNotification" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotImageReceived) name:@"gotImagesNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(animatedLoading) name:@"gettingData" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(animationDidFinish) name:@"gotData" object:nil];
     
     _appDelegate.characterType = @"";
-    
 }
 
 - (void)didReceiveMemoryWarning {

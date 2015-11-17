@@ -26,6 +26,11 @@ bool serverAvailable;
 
 - (void)getDataForSearch:(NSString *)searchString {
     NSLog(@"Get data");
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"gettingData" object:nil];
+    });
+    
     NSLog(@"AD Character Type: %@",_characterType);
     NSURL *fileURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/api/characters?%@q=%@",_hostName,_characterType,searchString]];
     NSLog(@"Search: %@",fileURL);
@@ -38,13 +43,14 @@ bool serverAvailable;
         if (([data length] > 0) && (error == nil)) {
             NSJSONSerialization *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
             NSLog(@"Got data");
-            _characterArray = [(NSDictionary *) json objectForKey:@"characters"];
-//            _affiliationArray = [(NSDictionary *) json objectForKey:@"affiliations"];
-//            for (NSDictionary *resultsDict in _characterArray) {
-//                NSLog(@"Character Name:%@",[resultsDict objectForKey:@"name"]);
-//            }
+            
             dispatch_async(dispatch_get_main_queue(), ^{
-                NSLog(@"Send Character Notification");
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"gotData" object:nil];
+            });
+            
+            _characterArray = [(NSDictionary *) json objectForKey:@"characters"];
+
+            dispatch_async(dispatch_get_main_queue(), ^{
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"gotCharactersNotification" object:nil];
             });
         }
@@ -63,7 +69,7 @@ bool serverAvailable;
         [request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
         [request setTimeoutInterval:30.0];
         NSURLSession *session = [NSURLSession sharedSession];
-//        NSLog(@"PreSession");
+
         [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
 //            NSLog(@"Length:%lu error:%@",[data length],error);
             if (([data length]> 0) && (error == nil)) {

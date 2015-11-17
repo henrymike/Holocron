@@ -85,8 +85,8 @@
 			children = (
 				55EF29C01BD01D1F0020C26F /* Social.framework */,
 				55EF29BE1BD01D080020C26F /* SystemConfiguration.framework */,
-				55EF29A11BCF3B240020C26F /* Chewey Audio */,
 				55EF29661BCEF4250020C26F /* AVFoundation.framework */,
+				55EF29A11BCF3B240020C26F /* Chewey Audio */,
 				55EF294B1BCEF4190020C26F /* Holocron */,
 				55EF294A1BCEF4190020C26F /* Products */,
 			);
