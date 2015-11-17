@@ -66,7 +66,7 @@
                                 <items>
                                     <tabBarItem title="Jedi" image="icon_jedi" id="CU9-PM-gIf"/>
                                     <tabBarItem tag="1" title="Sith" image="icon_sith" id="VuD-9I-DYE"/>
-                                    <tabBarItem tag="4" title="All" image="icon_sith" id="0t6-QJ-mOZ"/>
+                                    <tabBarItem tag="4" title="All" image="icon_droids" id="0t6-QJ-mOZ"/>
                                     <tabBarItem tag="2" title="Rebels" image="icon_rebels" id="xHs-Tq-jc5"/>
                                     <tabBarItem tag="3" title="Empire" image="icon_empire" id="ssA-Kx-OtM"/>
                                 </items>
@@ -444,6 +444,7 @@
     <resources>
         <image name="chewey" width="167" height="346"/>
         <image name="icon_chewbacca" width="30" height="30"/>
+        <image name="icon_droids" width="25" height="25"/>
         <image name="icon_empire" width="25" height="25"/>
         <image name="icon_jedi" width="25" height="25"/>
         <image name="icon_rebels" width="25" height="25"/>
