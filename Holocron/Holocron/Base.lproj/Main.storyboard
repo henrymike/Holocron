@@ -29,7 +29,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="no_image-small" translatesAutoresizingMaskIntoConstraints="NO" id="Xvo-sG-pyf">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="no_image-small" translatesAutoresizingMaskIntoConstraints="NO" id="Xvo-sG-pyf">
                                                     <rect key="frame" x="8" y="0.0" width="48" height="43"/>
                                                     <animations/>
                                                 </imageView>
@@ -66,6 +66,7 @@
                                 <items>
                                     <tabBarItem title="Jedi" image="icon_jedi" id="CU9-PM-gIf"/>
                                     <tabBarItem tag="1" title="Sith" image="icon_sith" id="VuD-9I-DYE"/>
+                                    <tabBarItem tag="4" title="All" image="icon_sith" id="0t6-QJ-mOZ"/>
                                     <tabBarItem tag="2" title="Rebels" image="icon_rebels" id="xHs-Tq-jc5"/>
                                     <tabBarItem tag="3" title="Empire" image="icon_empire" id="ssA-Kx-OtM"/>
                                 </items>
@@ -150,11 +151,6 @@
                             <color key="tintColor" red="0.81568627449999997" green="0.41176470590000003" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="1jx-8D-bpq" kind="show" identifier="segueChewey" id="Ebn-KN-SSi"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Animation" id="ciJ-bU-DBV">
-                            <connections>
-                                <action selector="animatedLoading" destination="BYZ-38-t0r" id="fIh-8y-TVI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

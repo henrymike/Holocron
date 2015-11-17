@@ -46,9 +46,15 @@
     }
     if (item.tag == 1) {
         NSLog(@"Sith tab selected");
-//            _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for Sith"];
+            _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for Sith"];
             _appDelegate.characterType = @"type=sith&";
             [_appDelegate getDataForSearch:_resultsSearchBar.text];
+    }
+    if (item.tag == 4) {
+        NSLog(@"All tab selected");
+        _resultsSearchBar.placeholder = [NSString stringWithFormat:@"Search for All"];
+        _appDelegate.characterType = @"";
+        [_appDelegate getDataForSearch:_resultsSearchBar.text];
     }
     if (item.tag == 2) {
         NSLog(@"Rebels tab selected");
@@ -88,6 +94,7 @@
 //            NSLog(@"Local %@",fileNameFull);
             cell.characterImageView.image = [UIImage imageNamed:[[_appDelegate getDocumentsDirectory] stringByAppendingPathComponent:fileNameFull]];
         } else {
+            cell.characterImageView.image = [UIImage imageNamed:@"no_image-small"];
 //            NSLog(@"Not Local %@ %@",[selectedResult objectForKey:@"name"],fileNameURL);
             [_appDelegate getImageFromServer:fileNameFull fromURL:fileNameURL atIndexPath:indexPath];
         }
