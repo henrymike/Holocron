@@ -316,7 +316,7 @@
         <!--Detail View Controller-->
         <scene sceneID="bZy-3E-jW6">
             <objects>
-                <viewController id="sgn-M6-s32" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="sgn-M6-s32" customClass="DetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JfP-NL-HeQ"/>
                         <viewControllerLayoutGuide type="bottom" id="w35-fl-kEI"/>
@@ -371,15 +371,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTe-bV-zQe">
-                                <rect key="frame" x="205" y="158" width="160" height="30"/>
+                                <rect key="frame" x="205" y="158" width="83" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="hTK-kT-PQf"/>
+                                    <constraint firstAttribute="width" constant="83" id="hTK-kT-PQf"/>
                                     <constraint firstAttribute="height" constant="30" id="wkE-a5-MvJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="View on Wookiepedia"/>
+                                <state key="normal" title="Wiki 📄"/>
                                 <connections>
                                     <action selector="characterURIButtonPressed:" destination="sgn-M6-s32" eventType="touchUpInside" id="MCx-ss-f1p"/>
                                 </connections>
@@ -450,7 +450,7 @@
         <image name="icon_rebels" width="25" height="25"/>
         <image name="icon_sith" width="25" height="25"/>
         <image name="millenium_falcon" width="117" height="136"/>
-        <image name="no_image-large" width="45" height="45"/>
+        <image name="no_image-large" width="82" height="77"/>
         <image name="no_image-small" width="25" height="25"/>
     </resources>
 </document>

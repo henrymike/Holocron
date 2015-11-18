@@ -39,7 +39,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -47,7 +46,6 @@
     _characterHomePlanet.text = @"Home Planet Unknown";
     _characterSpecies.text = @"Species Unknown";
     _characterBioTextView.text = @"Bio Unknown";
-    
     
     if ([_selectedCharacter objectForKey:@"name"] != [NSNull null]) {
     _characterName.text = [_selectedCharacter objectForKey:@"name"];
@@ -67,7 +65,6 @@
 //    if ([_selectedCharacter objectForKey:@"image"] != [NSNull null]) {
 //    _characterImage.image = [UIImage imageNamed:[_selectedCharacter objectForKey:@"image"]];
 //    }
-    
     if ([_selectedCharacter objectForKey:@"image"] != [NSNull null]) {
         NSString *fileNameURL = [_selectedCharacter objectForKey:@"image"];
         NSString *fileNameFull = [fileNameURL stringByReplacingOccurrencesOfString:@"/" withString:@""];
@@ -75,6 +72,11 @@
         fileNameFull = [fileNameFull stringByReplacingOccurrencesOfString:@":" withString:@""];
         _characterImage.image = [UIImage imageNamed:[[_appDelegate getDocumentsDirectory] stringByAppendingPathComponent:fileNameFull]];
     }
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:false];
+    [self.characterBioTextView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:false];
 }
 
 - (void)didReceiveMemoryWarning {
